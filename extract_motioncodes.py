@@ -534,6 +534,76 @@ def build_vector(mi, slots, option_b=True):
                 values.append(values[i*2]); values.append(values[i*2+1])
     return np.array(values, dtype=np.int32)
 
+def build_vector_topk(mi, slots, k=5, option_b=True):
+    """Like build_vector but keeps top-K motions per slot (sorted by |intensity|).
+    Each slot produces k × 2 values (intensity + velocity per motion).
+    Empty sub-slots are -1. Returns shape (num_slots × k × 2 [+ option_b duplicates])."""
+    values = []
+    for slot in slots:
+        kind = slot['kind']
+        ml = ALL_ELEMENTARY_MOTIONCODES[kind]
+        js_idx = None
+        for idx, entry in enumerate(ml):
+            ej = tuple(entry[0]) if isinstance(entry[0], tuple) else (entry[0],)
+            if ej == slot['joints']: js_idx = idx; break
+        if js_idx is not None and js_idx < len(mi[kind]):
+            motions = mi[kind][js_idx]
+            if motions:
+                sorted_m = sorted(motions, key=lambda m: abs(m['intensity']), reverse=True)[:k]
+                for m in sorted_m:
+                    values.append(m['spatial']); values.append(m['temporal'])
+                for _ in range(k - len(sorted_m)):
+                    values.append(-1); values.append(-1)
+            else:
+                for _ in range(k):
+                    values.append(-1); values.append(-1)
+        else:
+            for _ in range(k):
+                values.append(-1); values.append(-1)
+    if option_b:
+        base_len = len(slots) * k * 2
+        for i, slot in enumerate(slots):
+            if slot['is_pairwise']:
+                start = i * k * 2
+                for ki in range(k):
+                    values.append(values[start + ki*2]); values.append(values[start + ki*2 + 1])
+    return np.array(values, dtype=np.int32)
+
+def extract_motioncode_vector_topk(coords, k=5, option_b=True, verbose=False):
+    """Like extract_motioncode_vector but keeps top-K motions per slot."""
+    coords = coords.to(device)
+    if verbose: print("Preparing input...")
+    coords = prepare_input(coords)
+    if verbose: print("Preparing queries...")
+    pq = prepare_posecode_queries(); mq = prepare_motioncode_queries()
+    if verbose: print("Inferring posecodes...")
+    pi = infer_posecodes(coords, pq)
+    if verbose: print("Inferring motioncodes...")
+    mi = infer_motioncodes(coords, pi, pq, mq)
+    if verbose: print("Building top-K vector...")
+    slots = build_slot_definitions()
+    vec = build_vector_topk(mi, slots, k=k, option_b=option_b)
+    if verbose: print(f"Vector shape: {vec.shape}, Non-empty: {np.count_nonzero(vec != -1)}/{len(vec)}")
+    return vec
+
+def get_slot_labels_topk(k=5, option_b=True):
+    """Labels for the top-K vector."""
+    slots = build_slot_definitions()
+    labels = []
+    for s in slots:
+        j = '+'.join(s['joints'])
+        for ki in range(k):
+            labels.append(f"{j}|{s['kind']}|m{ki+1}_intensity")
+            labels.append(f"{j}|{s['kind']}|m{ki+1}_velocity")
+    if option_b:
+        for s in slots:
+            if s['is_pairwise']:
+                j = '+'.join(reversed(s['joints']))
+                for ki in range(k):
+                    labels.append(f"{j}|{s['kind']}|m{ki+1}_intensity(dup)")
+                    labels.append(f"{j}|{s['kind']}|m{ki+1}_velocity(dup)")
+    return labels
+
 def extract_motioncode_vector(coords, option_b=True, verbose=False):
     coords = coords.to(device)
     if verbose: print("Preparing input...")
@@ -909,5 +979,28 @@ space = process_motion_files(
     option_b=True, verbose=False
 )
 save_space(space, out_dir='motioncode_output')
+"
+"""
+
+""" top 5 joint respoonses
+python -c "
+import os
+from extract_motioncodes import load_humanml3d, extract_motioncode_vector_topk, get_slot_labels_topk, get_category_names, save_space
+import numpy as np
+
+files = [os.path.splitext(f)[0] for f in sorted(os.listdir('style_motions')) if f.endswith('.npy')]
+vectors, ids, failed = [], [], 0
+for i, mid in enumerate(files):
+    if i % 500 == 0: print(f'Processing {i}/{len(files)}...')
+    try:
+        coords = load_humanml3d(mid)
+        if coords.shape[0] < 2: failed += 1; continue
+        vec = extract_motioncode_vector_topk(coords, k=5, option_b=True)
+        vectors.append(vec); ids.append(mid)
+    except Exception as e: print(f'Failed {mid}: {e}'); failed += 1
+space = {'vectors': np.array(vectors, dtype=np.int32), 'motion_ids': ids,
+         'labels': get_slot_labels_topk(k=5, option_b=True), 'categories': get_category_names()}
+save_space(space, out_dir='motioncode_output_k5')
+print(f'Done: {len(vectors)} motions, {failed} failed')
 "
 """

@@ -1,17 +1,18 @@
 import os
 import json
+import math
+import random
 from dotenv import load_dotenv
 from openai import OpenAI
 
 load_dotenv(".env")
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-motion_folder = "style_motions"
-texts_folder = "style_texts"
+descriptions_folder = "style_descriptions"
 labels_file = "style_labels.json"
+output_file = "style_predictions.json"
 
-START_FROM_GROUP = None
-ONLY_GROUPS = ["backpedal", "run", "jog", "spin"]  # Only process these groups
+START_FROM_FILE = None  # Set to file_id to resume
 
 
 def load_labels():
@@ -19,96 +20,155 @@ def load_labels():
         return json.load(f)
 
 
-def save_labels(labels):
-    with open(labels_file, "w") as f:
-        json.dump(labels, f, indent=2)
+def load_predictions():
+    if os.path.exists(output_file):
+        with open(output_file, "r") as f:
+            return json.load(f)
+    return {}
 
 
-def deduplicate_group(group_name, group_data):
-    """Send group's {file: label} to API, get back cleaned version."""
-    group_json = json.dumps(group_data, indent=2)
+def save_predictions(preds):
+    with open(output_file, "w") as f:
+        json.dump(preds, f, indent=2)
 
+
+def build_examples(labels, descriptions_folder, example_fids):
+    """Build example strings from 15% of each group."""
+    examples = []
+    for group_name, entries in labels.items():
+        group_example_fids = [fid for fid in example_fids if fid in entries]
+        for fid in group_example_fids:
+            desc_path = os.path.join(descriptions_folder, fid + ".txt")
+            if os.path.exists(desc_path):
+                with open(desc_path, "r", encoding="utf-8") as f:
+                    text = f.read().strip()
+                label = entries[fid]
+                examples.append(f'"{text}" -> [{group_name}, {label}]')
+    return "\n".join(examples)
+
+
+def select_example_fids(labels):
+    """Select 15% (rounded up) of files from each group as examples."""
+    example_fids = set()
+    for group_name, entries in labels.items():
+        fids = list(entries.keys())
+        n = math.ceil(len(fids) * 0.15)
+        selected = random.sample(fids, min(n, len(fids)))
+        example_fids.update(selected)
+    return example_fids
+
+
+def process_file(text_content, examples):
+    """Send text to API, get top 3 verb/noun groups + specificity."""
     prompt = f"""
-Given the json structure, go through the labels of each file number and remove any that are analogous to or synonymous with one or more of the other labels.
-Do not remove all the analogous/synonymous labels, leave one. Return the same modified json structure.
+Given a text which predominantly describes a lower-body (referred to as gait) motion using human body parts movement, your goal is to determine what this motion would be semantically described as i.e. give it a verb/noun group which describes its gait locomotion.
+Pick top 3 verb/noun groups that best describe it. Also identify the specifity that makes that motion different from a default verb/noun group that you chose.
 
-The focus of the labels is on lower-body motion. You are not to aggressively remove content and only if they are the same by definition.
+Rules:
+- Lowercase
+- Output should be like [verb1/noun1, verb2/noun2, verb3/noun3, specifity]. The specifity can be a word or phrase [does not matter what grammatic structure (i.e. noun, verb, adj, etc..) as long as it distinguishes the motion from its group]. But use basic forms ex. lemma for verb
+- Verbs are usually preferred over nouns unless nouns better describe the gait locomotion.
+- Follow formats of specifity extraction, which provides things to look out for that will lead to the output... Look at examples of each format for reasoning.
+- In some cases a format that has been found is not suited for our situation... They have been listed in 'Formats to remove" and in this case, you should return REMOVE
+- In cases of multiple formats present, the most dominant one should be followed through.
+- Note that that the specifity extraction is being done for lower-body distinctiveness, not upper-body.
 
-{group_json}
+Formats of specifity extraction:
+- Gait modifier (general)
+- Style-induced gait (should be a significant style, not something casual) (more implied than general)
+- Limb specific bias
+- Stability
+- Gait intensity
+
+Examples of formats of specificity extraction:
+- Gait modifier: if a text describes salsa -> salsa
+- Gait modifier: if a text describes jumping jacks -> jumping jacks
+- Style-induced gait: if a text describes a sway -> sway
+- Style-induced gait: if a text describes a dramatic walk -> dramatic
+- Style-induced gait: if a text describes a cautious walk -> cautious
+- Style-induced gait: if a text describes a brisk walk -> brisk
+- Limb specific bias: if a text describes kicking with left leg, do not pick 'left leg' as kicking already implies that
+- Limb specific bias: if a text describes stepping forward with left leg, do not pick 'left leg' as walking already implies that 
+- Limb specific bias: if a text describes limping while holding right knee-> hold right knee
+- Limb specific bias: if a text describes hopping on one foot -> one foot
+- Limb specific bias: if a text describes walking while dragging feet -> foot drop
+- Limb specific bias: if a text describes jumping on toes-> toes
+- Stability: if a text describes losing balance -> lose balance
+- Gait intensity: if a text describes a large jump -> large
+- Gait intensity: if a text describes a long gait-> long gait
+
+Formats to not use for specifity extraction:
+- Gait pace (something like fast or slow would already be differentiated by for example, sprint group vs jog group)
+- Gait trajectory
+- Environmental constraint (focus is on flat ground)
+
+Examples: you are expected to give three verb/noun groups and 1 specifity but in examples, we only give 1 verb/noun group and 1 specifity
+{examples}
+
+Text:
+{text_content}
 """
 
     response = client.responses.create(
-        model="gpt-4.1-mini",
+        model="gpt-5-mini",
         input=prompt
     )
 
-    raw = response.output_text.strip()
-
-    # Extract JSON from response (may have markdown fences or trailing text)
-    if "```" in raw:
-        start = raw.find("{")
-        end = raw.rfind("}") + 1
-        raw = raw[start:end]
-    elif "{" in raw:
-        start = raw.find("{")
-        end = raw.rfind("}") + 1
-        raw = raw[start:end]
-
-    return json.loads(raw)
+    return response.output_text.strip().lower()
 
 
 # --- Main loop ---
 
 labels = load_labels()
-group_names = list(labels.keys())
+predictions = load_predictions()
+
+# Select 15% examples from each group
+example_fids = select_example_fids(labels)
+
+# All files in style_labels
+all_fids = set()
+for entries in labels.values():
+    all_fids.update(entries.keys())
+
+# Files to process = all files minus examples (examples are used as few-shot, not queried)
+process_fids = sorted(all_fids - example_fids)
+
+# Build examples string once
+examples_str = build_examples(labels, descriptions_folder, example_fids)
+
 api_call_count = 0
-started = START_FROM_GROUP is None
+started = START_FROM_FILE is None
 
-for group_name in group_names:
-    if ONLY_GROUPS and group_name not in ONLY_GROUPS:
-        continue
-
+for file_id in process_fids:
     if not started:
-        if group_name == START_FROM_GROUP:
+        if file_id == START_FROM_FILE:
             started = True
         else:
             continue
 
-    labels = load_labels()
-    if group_name not in labels:
+    # Skip if already predicted
+    if file_id in predictions:
         continue
 
-    group_data = labels[group_name]
-    before_count = len(group_data)
-
-    if before_count <= 1:
-        print(f"[SKIP] {group_name}: only {before_count} file(s)")
+    desc_path = os.path.join(descriptions_folder, file_id + ".txt")
+    if not os.path.exists(desc_path):
+        print(f"[SKIP] {file_id} - no description file")
         continue
+
+    with open(desc_path, "r", encoding="utf-8") as f:
+        text_content = f.read().strip()
 
     try:
-        cleaned = deduplicate_group(group_name, group_data)
+        output = process_file(text_content, examples_str)
         api_call_count += 1
 
-        # Find removed files
-        removed_files = set(group_data.keys()) - set(cleaned.keys())
-
-        # Don't delete from disk yet — just update labels
-        # for fid in removed_files:
-        #     for ext, folder in [(".txt", texts_folder), (".npy", motion_folder)]:
-        #         path = os.path.join(folder, fid + ext)
-        #         if os.path.exists(path):
-        #             os.remove(path)
-
-        # Update labels
-        labels = load_labels()
-        labels[group_name] = cleaned
-        save_labels(labels)
-
-        after_count = len(cleaned)
-        print(f"[{group_name}] {before_count} -> {after_count} (removed {len(removed_files)}: {removed_files if removed_files else 'none'})")
+        predictions[file_id] = output
+        save_predictions(predictions)
+        print(f"[{api_call_count}] {file_id}: {output}")
 
     except Exception as e:
-        print(f"[ERROR] {group_name}: {e}")
+        print(f"[ERROR] {file_id}: {e}")
         continue
 
 print(f"\nDone. API calls made: {api_call_count}")
+print(f"Total predictions: {len(predictions)}")

@@ -1,9 +1,10 @@
 __pycache__/
 .vscode/
 lower_body_motions/
-MotionScript/
 new_joint_vecs/
 new_joints/
 texts/
 texts.zip
 .env
+posescript/
+MotionScript/
