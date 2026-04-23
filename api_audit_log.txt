@@ -1,0 +1,908 @@
+--- Call #5 | File: 000008 ---
+Input:
+a man performs a squat while lifting his arms to shoulder height and hands above his head.#a/DET man/NOUN perform/VERB a/DET squat/NOUN while/SCONJ lift/VERB his/DET arm/NOUN to/ADP shoulder/NOUN height/NOUN and/CCONJ hand/NOUN above/ADP his/DET head/NOUN#0.0#0.0
+a person squats and raises both arms and then stand backup.#a/DET person/NOUN squat/VERB and/CCONJ raise/VERB both/DET arm/NOUN and/CCONJ then/ADV stand/VERB backup/ADJ#0.0#0.0
+a person does a squat and raises both arms over its head.#a/DET person/NOUN does/AUX a/DET squat/NOUN and/CCONJ raise/VERB both/DET arm/NOUN over/ADP its/DET head/NOUN#0.0#0.0
+a person squats down and puts their hands above their head#a/DET person/NOUN squat/VERB down/ADP and/CCONJ put/VERB their/DET hand/NOUN above/ADP their/DET head/NOUN#0.0#0.0
+
+Output: squat
+
+--- Call #10 | File: 000024 ---
+Input:
+person is doing a hand stand#person/NOUN is/AUX do/VERB a/DET hand/NOUN stand/NOUN#0.0#0.0
+a person does a handstand.#a/DET person/NOUN does/AUX a/DET handstand/NOUN#0.0#0.0
+a person puts its hands on the floor and does a handstand.#a/DET person/NOUN put/VERB its/DET hand/NOUN on/ADP the/DET floor/NOUN and/CCONJ does/AUX a/DET handstand/NOUN#0.0#0.0
+
+Output: remove
+
+--- Call #15 | File: 000041 ---
+Input:
+a person casually walks forward and then stops dramatically.#a/DET person/NOUN casually/ADV walk/VERB forward/ADV and/CCONJ then/ADV stop/VERB dramatically/ADV#0.0#0.0
+person is walking casually up to a point#person/NOUN is/AUX walk/VERB casually/ADV up/ADP to/ADP a/DET point/NOUN#0.0#0.0
+a person walks forward and then stops.#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ then/ADV stop/VERB#0.0#0.0
+
+Output: walk
+
+--- Call #20 | File: 000061 ---
+Input:
+a person walks forward while swinging their arms#a/DET person/NOUN walk/VERB forward/ADV while/SCONJ swinge/VERB their/DET arm/NOUN#0.0#0.0
+a person walks slowly on a treadmill.#a/DET person/NOUN walk/VERB slowly/ADV on/ADP a/DET treadmill/NOUN#0.0#0.0
+a man walks forwards on the same spot, infinitely.#a/DET man/NOUN walk/VERB forwards/ADV on/ADP the/DET same/ADJ spot/NOUN infinitely/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #25 | File: 000074 ---
+Input:
+a person leaps forward then stands straight.#a/DET person/NOUN leap/VERB forward/ADV then/ADV stand/VERB straight/ADV#0.0#0.0
+a person completes one large hop forward#a/DET person/NOUN complete/VERB one/NUM large/ADJ hop/NOUN forward/ADV#0.0#0.0
+a man jumps forward and swings his arms.#a/DET man/NOUN jump/VERB forward/ADV and/CCONJ swing/VERB his/DET arm/NOUN#0.0#0.0
+
+Output: jump
+
+--- Call #30 | File: 000093 ---
+Input:
+a man turns and walks in an arc to the left.#a/DET man/NOUN turn/VERB and/CCONJ walk/VERB in/ADP an/DET arc/NOUN to/ADP the/DET left/NOUN#0.0#5.0
+a person walks in an arc to their left#a/DET person/NOUN walk/VERB in/ADP an/DET arc/NOUN to/ADP their/DET left/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #35 | File: 000106 ---
+Input:
+a person moves backwards then forwards then jumps.#a/DET person/NOUN move/VERB backwards/ADV then/ADV forwards/ADV then/ADV jump/VERB#0.0#4.0
+someone jumping over a puddle#someone/PRON jump/VERB over/ADP a/DET puddle/NOUN#0.0#0.0
+a person jumps forward turns around and jumps in the other direction.#a/DET person/NOUN jump/VERB forward/ADV turn/VERB around/ADV and/CCONJ jump/VERB in/ADP the/DET other/ADJ direction/NOUN#0.0#0.0
+
+Output: jump
+
+--- Call #40 | File: 000128 ---
+Input:
+a person walks forward and climbs up something on the right hand side#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ climb/VERB up/ADP something/PRON on/ADP the/DET right/ADJ hand/NOUN side/NOUN#0.0#0.0
+slowly and cautiously walking forward while holding something to the sides of the person.#slowly/ADV and/CCONJ cautiously/ADV walk/VERB forward/ADV while/SCONJ hold/VERB something/PRON to/ADP the/DET side/NOUN of/ADP the/DET person/NOUN#0.0#0.0
+a man walks carefully across a narrow beam holding on to the walls on each side.#a/DET man/NOUN walk/VERB carefully/ADV across/ADP a/DET narrow/ADJ beam/NOUN hold/VERB on/ADP to/ADP the/DET wall/NOUN on/ADP each/DET side/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #45 | File: 000158 ---
+Input:
+person quickly moves to their left like avoiding something#person/NOUN quickly/ADV move/VERB to/ADP their/DET left/NOUN like/SCONJ avoid/VERB something/PRON#0.0#0.0
+a person jumps to the side, then stands still.#a/DET person/NOUN jump/VERB to/ADP the/DET side/NOUN then/ADV stand/VERB still/ADV#0.0#0.0
+a man takes a large quick step to his left then stops.#a/DET man/NOUN take/VERB a/DET large/ADJ quick/ADJ step/NOUN to/ADP his/DET left/NOUN then/ADV stop/VERB#0.0#0.0
+
+Output: sidestep
+
+--- Call #50 | File: 000186 ---
+Input:
+a person limps in a jagged line to the left, and then the right, while holding their right knee.#a/DET person/NOUN limp/VERB in/ADP a/DET jagged/ADJ line/NOUN to/ADP the/DET left/NOUN and/CCONJ then/ADV the/DET right/NOUN while/SCONJ hold/VERB their/DET right/ADJ knee/NOUN#0.0#0.0
+a person is walking and has injured their leg#a/DET person/NOUN is/AUX walk/VERB and/CCONJ has/AUX injure/VERB their/DET leg/NOUN#0.0#0.0
+a person walks unevenly while crouching down#a/DET person/NOUN walk/VERB unevenly/ADV while/SCONJ crouch/VERB down/ADP#0.0#0.0
+
+Output: limp
+
+--- Call #55 | File: 000203 ---
+Input:
+a person walks forward then stops#a/DET person/NOUN walk/VERB forward/ADV then/ADV stop/VERB#0.0#0.0
+this person takes four steps forward in a straight line.#this/DET person/NOUN take/VERB four/NUM step/NOUN forward/ADV in/ADP a/DET straight/ADJ line/NOUN#0.0#0.0
+a person starts to walk forward.#a/DET person/NOUN start/VERB to/PART walk/VERB forward/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #60 | File: 000214 ---
+Input:
+a man walks forward a couple steps then halts and walks in place.#a/DET man/NOUN walk/VERB forward/ADV a/DET couple/NOUN step/NOUN then/ADV halt/VERB and/CCONJ walk/VERB in/ADP place/NOUN#0.0#0.0
+walking up stairs, starts at a lower y axis and ends up higher.#walk/VERB up/ADP stair/NOUN start/VERB at/ADP a/DET lower/ADJ y/NOUN axis/NOUN and/CCONJ end/VERB up/ADP higher/ADV#0.0#0.0
+a person walks forward a few steps and then walks in place a few more steps.#a/DET person/NOUN walk/VERB forward/ADV a/DET few/ADJ step/NOUN and/CCONJ then/ADV walk/VERB in/ADP place/NOUN a/DET few/ADJ more/ADJ step/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #65 | File: 000231 ---
+Input:
+a person starts off in a jogging motion and then slows to a walk.#a/DET person/NOUN start/VERB off/ADP in/ADP a/DET jogging/NOUN motion/NOUN and/CCONJ then/ADV slow/VERB to/ADP a/DET walk/NOUN#0.0#0.0
+a person jogs forward and changes into a walk.#a/DET person/NOUN jog/VERB forward/ADV and/CCONJ change/VERB into/ADP a/DET walk/NOUN#0.0#0.0
+
+Output: jog
+
+--- Call #70 | File: 000256 ---
+Input:
+the body walks in a strong line, increasing speed slowly.#the/DET body/NOUN walk/VERB in/ADP a/DET strong/ADJ line/NOUN increase/VERB speed/NOUN slowly/ADV#0.0#6.0
+a person walks forward slowly.#a/DET person/NOUN walk/VERB forward/ADV slowly/ADV#0.0#0.0
+a person walks forward slowly.#a/DET person/NOUN walk/VERB forward/ADV slowly/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #75 | File: 000274 ---
+Input:
+a man walks forward and raises both his arms and then drop his arms .#a/DET man/NOUN walk/VERB forward/ADV and/CCONJ raise/VERB both/CCONJ his/DET arm/NOUN and/CCONJ then/ADV drop/VERB his/DET arm/NOUN#0.0#0.0
+a person walks forward one foot in front of the other with both arms stretched out.#a/DET person/NOUN walk/VERB forward/ADV one/NUM foot/NOUN in/ADP front/NOUN of/ADP the/DET other/ADJ with/ADP both/DET arm/NOUN stretch/VERB out/ADP#0.0#0.0
+a person walks carefully forward over a wide beam.#a/DET person/NOUN walk/VERB carefully/ADV forward/ADV over/ADP a/DET wide/ADJ beam/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #80 | File: 000293 ---
+Input:
+a person is walking forward with very animated hand motions.#a/DET person/NOUN is/AUX walk/VERB forward/ADV with/ADP very/ADV animate/VERB hand/NOUN motion/NOUN#0.0#0.0
+a person is walking forward and moving side to side#a/DET person/NOUN is/AUX walk/VERB forward/ADV and/CCONJ move/VERB side/NOUN to/PART side/VERB#0.0#0.0
+a person is moving in a basketball player styled motion as if dribbling a ball.#a/DET person/NOUN is/AUX move/VERB in/ADP a/DET basketball/NOUN player/NOUN style/VERB motion/NOUN as/SCONJ if/SCONJ dribble/VERB a/DET ball/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #85 | File: 000313 ---
+Input:
+a man walks forward sits in a chair then with his right hand.#a/DET man/NOUN walk/VERB forward/ADV sit/VERB in/ADP a/DET chair/NOUN then/ADV with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0
+a person walks around a chair then sits down then sets something on a table#a/DET person/NOUN walk/VERB around/ADP a/DET chair/NOUN then/ADV sit/VERB down/ADV then/ADV set/VERB something/PRON on/ADP a/DET table/NOUN#0.0#0.0
+a person walks along a curve#a/DET person/NOUN walk/VERB along/ADP a/DET curve/NOUN#0.0#3.0
+
+Output: walk
+
+--- Call #90 | File: 000342 ---
+Input:
+a person does jumping jacks, spreading their arms and legs out and in with each jump#a/DET person/NOUN does/AUX jump/VERB jack/NOUN spread/VERB their/DET arm/NOUN and/CCONJ leg/NOUN out/ADV and/CCONJ in/ADV with/ADP each/DET jump/NOUN#0.0#0.0
+a persin is doing jumping jacks.#a/DET persin/NOUN is/AUX do/VERB jump/VERB jack/NOUN#0.0#0.0
+a person does jumping jacks for a few seconds and then stops catching their balance.#a/DET person/NOUN does/AUX jump/VERB jack/NOUN for/ADP a/DET few/ADJ second/NOUN and/CCONJ then/ADV stop/VERB catch/VERB their/DET balance/NOUN#0.0#0.0
+
+Output: jump
+
+--- Call #95 | File: 000360 ---
+Input:
+a small dip to gear up for a two legged hop#a/DET small/ADJ dip/NOUN to/PART gear/VERB up/ADP for/ADP a/DET two/NUM legged/ADJ hop/NOUN#0.0#0.0
+person jumps once on the spot#person/NOUN jump/VERB once/ADV on/ADP the/DET spot/NOUN#0.0#0.0
+i see someone jump up once#i/PRON see/VERB someone/PRON jump/VERB up/ADP once/ADV#0.0#0.0
+
+Output: jump
+
+--- Call #100 | File: 000375 ---
+Input:
+a person walks forward diagonally and then turns to the left.#a/DET person/NOUN walk/VERB forward/ADV diagonally/ADV and/CCONJ then/ADV turn/VERB to/ADP the/DET left/NOUN#0.0#0.0
+someone casually walks to the left, making a fluid turn.#someone/PRON casually/ADV walk/VERB to/ADP the/DET left/NOUN make/VERB a/DET fluid/ADJ turn/NOUN#0.0#0.0
+a person walks forward curving to their right as they do so.#a/DET person/NOUN walk/VERB forward/ADV curve/VERB to/ADP their/DET right/NOUN as/SCONJ they/PRON do/AUX so/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #105 | File: 000402 ---
+Input:
+person moves their hands and feet up and down while walking in circles.#person/NOUN move/VERB their/DET hand/NOUN and/CCONJ foot/NOUN up/ADV and/CCONJ down/ADV while/SCONJ walk/VERB in/ADP circle/NOUN#0.0#0.0
+a person is swinging their arms and stepping while rotating clockwise in place.#a/DET person/NOUN is/AUX swinge/VERB their/DET arm/NOUN and/CCONJ step/VERB while/SCONJ rotate/VERB clockwise/NOUN in/ADP place/NOUN#0.0#0.0
+a figure bouncing off one foot to the other dancing in a figure 8, while waving their arms around the air in rhythm with their feet#a/DET figure/NOUN bounce/VERB off/ADP one/NUM foot/NOUN to/ADP the/DET other/ADJ dancing/NOUN in/ADP a/DET figure/NOUN while/SCONJ wave/VERB their/DET arm/NOUN around/ADP the/DET air/NOUN in/ADP rhythm/NOUN with/ADP their/DET foot/NOUN#0.0#0.0
+
+Output: dance
+
+--- Call #110 | File: 000423 ---
+Input:
+person is doing fast jumping jacks#person/NOUN is/AUX do/VERB fast/ADJ jump/VERB jack/NOUN#0.0#0.0
+a person is doing many jumping jacks.#a/DET person/NOUN is/AUX do/VERB many/ADJ jump/VERB jack/NOUN#0.0#0.0
+a person is doing standing jumping jacks.#a/DET person/NOUN is/AUX do/VERB stand/VERB jumping/NOUN jack/NOUN#0.0#0.0
+
+Output: jump
+
+--- Call #115 | File: 000440 ---
+Input:
+someone stands sideways and throws something with their right hand.#someone/PRON stand/VERB sideways/ADV and/CCONJ throw/VERB something/PRON with/ADP their/DET right/ADJ hand/NOUN#0.0#0.0
+a person is playing tennis#a/DET person/NOUN is/AUX play/VERB tennis/NOUN#0.0#0.0
+the figure twists its torso, extends its arm back, and makes a throwing gesture#the/DET figure/NOUN twist/VERB its/DET torso/NOUN extend/VERB its/DET arm/NOUN back/ADV and/CCONJ make/VERB a/DET throwing/NOUN gesture/NOUN#0.0#0.0
+
+Output: remove
+
+--- Call #120 | File: 000459 ---
+Input:
+a person is performing a pitching motion as if throwing a ball.#a/DET person/NOUN is/AUX perform/VERB a/DET pitching/NOUN motion/NOUN as/SCONJ if/SCONJ throw/VERB a/DET ball/NOUN#0.0#0.0
+person is doing a baseball throw but in slow motion#person/NOUN is/AUX do/VERB a/DET baseball/NOUN throw/NOUN but/CCONJ in/ADP slow/ADJ motion/NOUN#0.0#0.0
+a person brings their hands together twice, then throws something#a/DET person/NOUN bring/VERB their/DET hand/NOUN together/ADV twice/ADV then/ADV throw/VERB something/PRON#0.0#0.0
+
+Output: remove
+
+--- Call #125 | File: 000475 ---
+Input:
+a person kneels down onto all fours, crawls towards the right, and then stands back up#a/DET person/NOUN kneel/VERB down/ADP onto/ADP all/DET four/NOUN crawl/VERB towards/ADP the/DET right/NOUN and/CCONJ then/ADV stand/VERB back/ADV up/ADV#0.0#0.0
+a person walks backwards then crawls forword.#a/DET person/NOUN walk/VERB backwards/ADV then/ADV crawl/VERB forword/NOUN#0.0#6.0
+the figure bends down on its hands and knees and then crawls forward.#the/DET figure/NOUN bend/VERB down/ADP on/ADP its/DET hand/NOUN and/CCONJ knee/NOUN and/CCONJ then/ADV crawl/VERB forward/ADV#0.0#0.0
+
+Output: crawl
+
+--- Call #130 | File: 000487 ---
+Input:
+a person takes one step to the side, crouches, folds their hands in their lap, and then rises upright again.#a/DET person/NOUN take/VERB one/NUM step/NOUN to/ADP the/DET side/NOUN crouch/NOUN fold/VERB their/DET hand/NOUN in/ADP their/DET lap/NOUN and/CCONJ then/ADV rise/VERB upright/ADV again/ADV#0.0#8.0
+a person sidesteps facing forward and then stands up again.#a/DET person/NOUN sidestep/VERB face/VERB forward/ADV and/CCONJ then/ADV stand/VERB up/ADP again/ADV#0.0#0.0
+person takes a step to their left and sits down then stands back up#person/NOUN take/VERB a/DET step/NOUN to/ADP their/DET left/NOUN and/CCONJ sit/VERB down/ADV then/ADV stand/VERB back/ADV up/ADV#0.0#0.0
+
+Output: sidestep
+
+--- Call #135 | File: 000502 ---
+Input:
+takes a few steps forward and one step back and then more ateps forward#take/VERB a/DET few/ADJ step/NOUN forward/ADV and/CCONJ one/NUM step/NOUN back/ADV and/CCONJ then/ADV more/ADJ atep/NOUN forward/ADV#0.0#0.0
+a person walks forward, then takes a step back with their left foot before walking forward again.#a/DET person/NOUN walk/VERB forward/ADV then/ADV take/VERB a/DET step/NOUN back/ADV with/ADP their/DET left/ADJ foot/NOUN before/ADP walk/VERB forward/ADV again/ADV#0.0#0.0
+a person walks forward then walks back.#a/DET person/NOUN walk/VERB forward/ADV then/ADV walk/VERB back/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #140 | File: 000520 ---
+Input:
+a person walks turning to the right.#a/DET person/NOUN walk/VERB turn/VERB to/ADP the/DET right/NOUN#0.0#0.0
+walking forward and stopping gf#walk/VERB forward/ADV and/CCONJ stop/VERB gf/NOUN#0.0#0.0
+the figure in the video walked forward and then went to its right and stood still.#the/DET figure/NOUN in/ADP the/DET video/NOUN walk/VERB forward/ADV and/CCONJ then/ADV go/VERB to/ADP its/DET right/NOUN and/CCONJ stand/VERB still/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #145 | File: 000540 ---
+Input:
+a standing person extends both hands up, above their head and jumps three times.#a/DET stand/VERB person/NOUN extend/VERB both/DET hand/NOUN up/ADP above/ADP their/DET head/NOUN and/CCONJ jump/VERB three/NUM time/NOUN#0.0#0.0
+a person jumping up and down, with their hands above their head.#a/DET person/NOUN jump/VERB up/ADP and/CCONJ down/ADV with/ADP their/DET hand/NOUN above/ADP their/DET head/NOUN#0.0#0.0
+a man reaches both arms above his head and then jumps 3 times before lowering his arms.#a/DET man/NOUN reach/VERB both/DET arm/NOUN above/ADP his/DET head/NOUN and/CCONJ then/ADV jump/VERB time/NOUN before/ADP lower/VERB his/DET arm/NOUN#0.0#0.0
+
+Output: jump
+
+--- Call #150 | File: 000554 ---
+Input:
+someone walks up to a position and then sits down on the ground.#someone/PRON walk/VERB up/ADP to/ADP a/DET position/NOUN and/CCONJ then/ADV sit/VERB down/ADP on/ADP the/DET ground/NOUN#0.0#0.0
+a person sits down and stretches out legs.#a/DET person/NOUN sit/VERB down/ADP and/CCONJ stretch/VERB out/ADP leg/NOUN#0.0#0.0
+a person walks forward then sits down.#a/DET person/NOUN walk/VERB forward/ADV then/ADV sit/VERB down/ADP#0.0#0.0
+
+Output: walk
+
+--- Call #155 | File: 000571 ---
+Input:
+a person loses his balance towards his right and then steps back towards his left.#a/DET person/NOUN lose/VERB his/DET balance/NOUN towards/ADP his/DET right/NOUN and/CCONJ then/ADV step/VERB back/ADV towards/ADP his/DET left/NOUN#0.0#0.0
+a person steps sideways to the right and then sideways to the left.#a/DET person/NOUN step/VERB sideways/ADV to/ADP the/DET right/NOUN and/CCONJ then/ADV sideway/VERB to/ADP the/DET left/NOUN#0.0#0.0
+a person steps to the left while crossing right foot behind left foot, then steps back to the right.#a/DET person/NOUN step/VERB to/ADP the/DET left/ADJ while/SCONJ cross/VERB right/ADJ foot/NOUN behind/ADP left/ADJ foot/NOUN then/ADV step/VERB back/ADV to/ADP the/DET right/NOUN#0.0#0.0
+
+Output: sidestep
+
+--- Call #160 | File: 000594 ---
+Input:
+a person softly hops in position, keeping their arms and legs stiff.#a/DET person/NOUN softly/ADV hop/VERB in/ADP position/NOUN keep/VERB their/DET arm/NOUN and/CCONJ leg/NOUN stiff/ADJ#0.0#0.0
+the figure does six short hops in a row.#the/DET figure/NOUN does/AUX six/NUM short/ADJ hop/NOUN in/ADP a/DET row/NOUN#0.0#0.0
+person is jumping in palce#person/NOUN is/AUX jump/VERB in/ADP palce/PROPN#0.0#0.0
+
+Output: jump
+
+--- Call #165 | File: 000599 ---
+Input:
+a person does star jumps.#a/DET person/NOUN does/AUX star/NOUN jump/NOUN#0.0#10.0
+does 2 jumping jacks with both feet and arms above his head.#does/AUX jump/VERB jack/NOUN with/ADP both/DET foot/NOUN and/CCONJ arm/NOUN above/ADP his/DET head/NOUN#0.0#3.0
+the person did to jumping jacks.#the/DET person/NOUN did/AUX to/ADP jump/VERB jack/NOUN#0.0#0.0
+
+Output: jump
+
+--- Call #170 | File: 000606 ---
+Input:
+a man walks forwards quickly, swinging his bent arms in a quick motion.#a/DET man/NOUN walk/VERB forwards/ADP quickly/ADV swinge/VERB his/DET bent/ADJ arm/NOUN in/ADP a/DET quick/ADJ motion/NOUN#0.0#0.0
+walks forward and moves to the left slitghtly while walkng#walk/VERB forward/ADV and/CCONJ move/VERB to/ADP the/DET left/NOUN slitghtly/ADV while/SCONJ walkng/PROPN#0.0#0.0
+he walks forward then stops#he/PRON walk/VERB forward/ADV then/ADV stop/VERB#0.0#0.0
+
+Output: walk
+
+--- Call #175 | File: 000632 ---
+Input:
+standing person walks in a clockwise circle, then stops.#stand/VERB person/NOUN walk/VERB in/ADP a/DET clockwise/NOUN circle/NOUN then/ADV stop/VERB#0.0#0.0
+person is walking around in a circle.#person/NOUN is/AUX walk/VERB around/ADP in/ADP a/DET circle/NOUN#0.0#0.0
+a person walks in a clockwise circle.#a/DET person/NOUN walk/VERB in/ADP a/DET clockwise/ADJ circle/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #180 | File: 000660 ---
+Input:
+a person calmly walks forward and then stops.#a/DET person/NOUN calmly/ADV walk/VERB forward/ADV and/CCONJ then/ADV stop/VERB#0.0#0.0
+someone is walking down a flight of steps#someone/PRON is/AUX walk/VERB down/ADP a/DET flight/NOUN of/ADP step/NOUN#0.0#0.0
+the person is walking forward.#the/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #185 | File: 000685 ---
+Input:
+a person takes two steps backwards.#a/DET person/NOUN take/VERB two/NUM step/NOUN backwards/ADV#0.0#0.0
+person is backing up.#person/NOUN is/AUX back/VERB up/ADP#0.0#0.0
+a person takes one step.#a/DET person/NOUN take/VERB one/NUM step/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #190 | File: 000702 ---
+Input:
+a figure facing forward on a line turns to the left then turns around.#a/DET figure/NOUN face/VERB forward/ADV on/ADP a/DET line/NOUN turn/VERB to/ADP the/DET left/NOUN then/ADV turn/VERB around/ADV#0.0#0.0
+a person took a slight step to the right and then they took a step to the left facing the camera.#a/DET person/NOUN take/VERB a/DET slight/ADJ step/NOUN to/ADP the/DET right/NOUN and/CCONJ then/ADV they/PRON take/VERB a/DET step/NOUN to/ADP the/DET left/NOUN face/VERB the/DET camera/NOUN#0.0#0.0
+a person turns and stands still#a/DET person/NOUN turn/VERB and/CCONJ stand/VERB still/ADV#0.0#0.0
+
+Output: sidestep
+
+--- Call #195 | File: 000710 ---
+Input:
+a person walks forward while twisting their torso side to side.#a/DET person/NOUN walk/VERB forward/ADV while/SCONJ twist/VERB their/DET torso/NOUN side/NOUN to/PART side/VERB#0.0#0.0
+walking while swinging both arms from left to right#walk/VERB while/SCONJ swinge/VERB both/DET arm/NOUN from/ADP left/VERB to/ADP right/ADJ#0.0#0.0
+a man walks forward while swinging his shoulders from side to side.#a/DET man/NOUN walk/VERB forward/ADV while/SCONJ swinge/VERB his/DET shoulder/NOUN from/ADP side/NOUN to/ADP side/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #200 | File: 000729 ---
+Input:
+a man leans slightly to the right, then walks forward.#a/DET man/NOUN lean/VERB slightly/ADV to/ADP the/DET right/NOUN then/ADV walk/VERB forward/ADV#0.0#0.0
+a person walks forward, they have a long gait.#a/DET person/NOUN walk/VERB forward/ADV they/PRON have/AUX a/DET long/ADJ gait/NOUN#0.0#0.0
+a person is standing upright and walking forward, with arms down by their sides.#a/DET person/NOUN is/AUX stand/VERB upright/ADV and/CCONJ walk/VERB forward/ADV with/ADP arm/NOUN down/ADV by/ADP their/DET side/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #205 | File: 000748 ---
+Input:
+a person touches something at chest height with both hands and then takes a couple steps backwards#a/DET person/NOUN touch/VERB something/PRON at/ADP chest/NOUN height/NOUN with/ADP both/DET hand/NOUN and/CCONJ then/ADV take/VERB a/DET couple/NOUN step/NOUN backwards/ADV#0.0#0.0
+a person leans forward,like picking up something and steps back#a/DET person/NOUN lean/VERB forward/ADV like/SCONJ pick/VERB up/ADP something/PRON and/CCONJ step/NOUN back/ADV#0.0#0.0
+a person standing in place rearranges something with right hand then with both hands, then stops and takes a step backwards.#a/DET person/NOUN stand/VERB in/ADP place/NOUN rearrange/NOUN something/PRON with/ADP right/ADJ hand/NOUN then/ADV with/ADP both/DET hand/NOUN then/ADV stop/VERB and/CCONJ take/VERB a/DET step/NOUN backwards/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #210 | File: 000764 ---
+Input:
+a person jumps to the right and then stops.#a/DET person/NOUN jump/VERB to/ADP the/DET right/NOUN and/CCONJ then/ADV stop/VERB#0.0#0.0
+the person is jumping from one side to the other.#the/DET person/NOUN is/AUX jump/VERB from/ADP one/NUM side/NOUN to/ADP the/DET other/ADJ#0.0#0.0
+a person jumped to the right side once.#a/DET person/NOUN jump/VERB to/ADP the/DET right/ADJ side/NOUN once/ADV#0.0#0.0
+
+Output: jump
+
+--- Call #215 | File: 000779 ---
+Input:
+a person is swinging a bat to hit the ball.#a/DET person/NOUN is/AUX swinge/VERB a/DET bat/NOUN to/PART hit/VERB the/DET ball/NOUN#0.0#0.0
+a person puts their hands together to the right of their right shoulder, and twice swings their arms forward, as if they were swinging a baseball bat.#a/DET person/NOUN put/VERB their/DET hand/NOUN together/ADV to/ADP the/DET right/NOUN of/ADP their/DET right/ADJ shoulder/NOUN and/CCONJ twice/ADV swing/VERB their/DET arm/NOUN forward/ADV as/SCONJ if/SCONJ they/PRON were/AUX swinge/VERB a/DET baseball/NOUN bat/NOUN#0.0#0.0
+a person swinging a bat#a/DET person/NOUN swinge/VERB a/DET bat/NOUN#0.0#0.0
+
+Output: remove
+
+--- Call #220 | File: 000799 ---
+Input:
+a man raises his left and right arms while exercising.#a/DET man/NOUN raise/VERB his/DET left/ADJ and/CCONJ right/ADJ arm/NOUN while/SCONJ exercise/VERB#0.0#0.0
+a person stands on the spot and swings arms in a grabbing motion then kicks with their left foot.#a/DET person/NOUN stand/VERB on/ADP the/DET spot/NOUN and/CCONJ swing/VERB arm/NOUN in/ADP a/DET grabbing/ADJ motion/NOUN then/ADV kick/VERB with/ADP their/DET left/ADJ foot/NOUN#0.0#5.0
+a person moving arms and left leg in a certain motion#a/DET person/NOUN move/VERB arm/NOUN and/CCONJ left/VERB leg/NOUN in/ADP a/DET certain/ADJ motion/NOUN#0.0#0.0
+
+Output: kick
+
+--- Call #225 | File: 000819 ---
+Input:
+the man exercises his arms then squats.#the/DET man/NOUN exercise/VERB his/DET arm/NOUN then/ADV squat/VERB#0.0#0.0
+a man lowers his arms and then does a squat.#a/DET man/NOUN lower/VERB his/DET arm/NOUN and/CCONJ then/ADV does/AUX a/DET squat/NOUN#0.0#0.0
+he raises his hands to the side holds them up, and does a knee bend.#he/PRON raise/VERB his/DET hand/NOUN to/ADP the/DET side/NOUN hold/VERB them/PRON up/ADP and/CCONJ does/AUX a/DET knee/NOUN bend/NOUN#0.0#0.0
+
+Output: squat
+
+--- Call #230 | File: 000828 ---
+Input:
+a person walks forward in a straight line that is slightly leaning to the right.#a/DET person/NOUN walk/VERB forward/ADV in/ADP a/DET straight/ADJ line/NOUN that/DET is/AUX slightly/ADV lean/VERB to/ADP the/DET right/NOUN#0.0#0.0
+a person is walking#a/DET person/NOUN is/AUX walk/VERB#0.0#7.0
+a model walks down a run-way.#a/DET model/NOUN walk/VERB down/ADP a/DET runway/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #235 | File: 000845 ---
+Input:
+a person stumbles backwards then forwards hitting against something.#a/DET person/NOUN stumble/VERB backwards/ADV then/ADV forwards/ADV hit/VERB against/ADP something/PRON#0.0#0.0
+person is walking and jumping around.#person/NOUN is/AUX walk/VERB and/CCONJ jump/VERB around/ADV#0.0#0.0
+walking a one-sided jagged circle clockwise with arms swaying.#walk/VERB a/DET oneside/VERB jagged/ADJ circle/NOUN clockwise/NOUN with/ADP arm/NOUN sway/VERB#0.0#0.0
+
+Output: walk
+
+--- Call #240 | File: 000862 ---
+Input:
+a man takes two steps forward and turns back#a/DET man/NOUN take/VERB two/NUM step/NOUN forward/ADV and/CCONJ turn/VERB back/ADV#0.0#0.0
+a person takes two steps forward then spins around on their left foot in the opposite direction and then takes two steps forward again.#a/DET person/NOUN take/VERB two/NUM step/NOUN forward/ADV then/ADV spin/VERB around/ADV on/ADP their/DET left/ADJ foot/NOUN in/ADP the/DET opposite/ADJ direction/NOUN and/CCONJ then/ADV take/VERB two/NUM step/NOUN forward/ADV again/ADV#0.0#0.0
+a person walks forward spins to the right then walk back#a/DET person/NOUN walk/VERB forward/ADV spin/VERB to/ADP the/DET right/NOUN then/ADV walk/VERB back/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #245 | File: 000872 ---
+Input:
+a man side steps to the right.#a/DET man/NOUN side/NOUN step/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+a person strafes one step to the right, our left.#a/DET person/NOUN strafe/VERB one/NUM step/NOUN to/ADP the/DET right/NOUN our/DET left/NOUN#0.0#3.0
+a person while standing takes and step sideways.#a/DET person/NOUN while/SCONJ stand/VERB take/NOUN and/CCONJ step/VERB sideways/ADV#0.0#0.0
+
+Output: sidestep
+
+--- Call #250 | File: 000881 ---
+Input:
+person dribbles an air basketball and walks forward#person/NOUN dribble/VERB an/DET air/NOUN basketball/NOUN and/CCONJ walk/VERB forward/ADV#0.0#0.0
+someone is dribbling a basketball while walking down the screen#someone/PRON is/AUX dribble/VERB a/DET basketball/NOUN while/SCONJ walk/VERB down/ADP the/DET screen/NOUN#0.0#0.0
+person is walking down.#person/NOUN is/AUX walk/VERB down/ADP#0.0#0.0
+
+Output: walk
+
+--- Call #255 | File: 000896 ---
+Input:
+the person is sitting down and i think putting something down.#the/DET person/NOUN is/AUX sit/VERB down/ADP and/CCONJ i/PRON think/VERB put/VERB something/PRON down/ADP#0.0#0.0
+a person sits down at a table, leaning onto their right elbow, then stands up again.#a/DET person/NOUN sit/VERB down/ADP at/ADP a/DET table/NOUN lean/VERB onto/ADP their/DET right/ADJ elbow/NOUN then/ADV stand/VERB up/ADP again/ADV#0.0#0.0
+person sits down and leans on the chair#person/NOUN sit/VERB down/ADP and/CCONJ lean/NOUN on/ADP the/DET chair/NOUN#0.0#0.0
+
+Output: remove
+
+--- Call #260 | File: 000912 ---
+Input:
+walking forward with both hands swinging#walk/VERB forward/ADV with/ADP both/DET hand/NOUN swinge/VERB#2.0#2.0
+a person walks down a ramp, then stops.#a/DET person/NOUN walk/VERB down/ADP a/DET ramp/NOUN then/ADV stop/VERB#0.0#0.0
+a person walks forward at a brisk pace.#a/DET person/NOUN walk/VERB forward/ADV at/ADP a/DET brisk/ADJ pace/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #265 | File: 000929 ---
+Input:
+the man washes his right hand.#the/DET man/NOUN wash/VERB his/DET right/ADJ hand/NOUN#0.0#0.0
+a man turns to the side and rubs something with his hand.#a/DET man/NOUN turn/VERB to/ADP the/DET side/NOUN and/CCONJ rub/VERB something/PRON with/ADP his/DET hand/NOUN#0.0#0.0
+a person picks something up and moves their hand over it#a/DET person/NOUN pick/VERB something/PRON up/ADP and/CCONJ move/VERB their/DET hand/NOUN over/ADP it/PRON#0.0#0.0
+
+Output: remove
+
+--- Call #270 | File: 000948 ---
+Input:
+a man walks around in a circular motion while gently swinging his arms.#a/DET man/NOUN walk/VERB around/ADV in/ADP a/DET circular/ADJ motion/NOUN while/SCONJ gently/ADV swinge/VERB his/DET arm/NOUN#0.0#0.0
+a person walks in a counter clockwise direction.#a/DET person/NOUN walk/VERB in/ADP a/DET counter/NOUN clockwise/NOUN direction/NOUN#0.0#0.0
+a person walks in a clockwise oval.#a/DET person/NOUN walk/VERB in/ADP a/DET clockwise/NOUN oval/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #275 | File: 000959 ---
+Input:
+a person steps onto a narrow walkway, unsteadily moves across, and then back down to the ground.#a/DET person/NOUN step/VERB onto/ADP a/DET narrow/ADJ walkway/NOUN unsteadily/ADV move/VERB across/ADP and/CCONJ then/ADV back/ADV down/ADP to/ADP the/DET ground/NOUN#0.0#0.0
+a person steps up onto something, walks forward, then steps down#a/DET person/NOUN step/VERB up/ADP onto/ADP something/PRON walk/VERB forward/ADV then/ADV step/VERB down/ADV#0.0#0.0
+a person steps up and walks across the floor#a/DET person/NOUN step/VERB up/ADP and/CCONJ walk/VERB across/ADP the/DET floor/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #280 | File: 000986 ---
+Input:
+a person is walking forward using their right arm for support on something.#a/DET person/NOUN is/AUX walk/VERB forward/ADV use/VERB their/DET right/ADJ arm/NOUN for/ADP support/NOUN on/ADP something/PRON#0.0#0.0
+a person walking with support .#a/DET person/NOUN walk/VERB with/ADP support/NOUN#0.0#0.0
+someone moving while holding table#someone/PRON move/VERB while/SCONJ hold/VERB table/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #285 | File: 001017 ---
+Input:
+a person forcefully kicks with their left leg and then steps back.#a/DET person/NOUN forcefully/ADV kick/VERB with/ADP their/DET left/ADJ leg/NOUN and/CCONJ then/ADV step/VERB back/ADV#0.0#0.0
+a person side kicking with left leg.#a/DET person/NOUN side/NOUN kick/VERB with/ADP left/ADJ leg/NOUN#0.0#0.0
+the person is kicking soemthing.#the/DET person/NOUN is/AUX kick/VERB soemthe/VERB#0.0#0.0
+
+Output: kick
+
+--- Call #290 | File: 001029 ---
+Input:
+someone is walking forward and holding a handrail very carefully, as if they are afraid of falling.#someone/PRON is/AUX walk/VERB forward/ADV and/CCONJ hold/VERB a/DET handrail/NOUN very/ADV carefully/ADV as/SCONJ if/SCONJ they/PRON are/AUX afraid/ADJ of/ADP fall/VERB#0.0#0.0
+a person walks forward slowly while holding on to something on either side of them.#a/DET person/NOUN walk/VERB forward/ADV slowly/ADV while/SCONJ hold/VERB on/ADP to/ADP something/PRON on/ADP either/DET side/NOUN of/ADP them/PRON#0.0#0.0
+a person walks on uneven ground whilst holding on to handrail.#a/DET person/NOUN walk/VERB on/ADP uneven/ADJ ground/NOUN whilst/SCONJ hold/VERB on/ADP to/ADP handrail/PROPN#0.0#0.0
+
+Output: walk
+
+--- Call #295 | File: 001040 ---
+Input:
+a man jumps up and down, flapping his hands.#a/DET man/NOUN jump/VERB up/ADV and/CCONJ down/ADV flap/VERB his/DET hand/NOUN#0.0#0.0
+a man bounces lightly on his toes while gently shaking his arms and shaking his wrists.#a/DET man/NOUN bounce/VERB lightly/ADV on/ADP his/DET toe/NOUN while/SCONJ gently/ADV shake/VERB his/DET arm/NOUN and/CCONJ shake/VERB his/DET wrist/NOUN#0.0#0.0
+a man jumps up and down repeatedly slightly flapping his hands.#a/DET man/NOUN jump/VERB up/ADV and/CCONJ down/ADP repeatedly/ADV slightly/ADV flap/VERB his/DET hand/NOUN#0.0#0.0
+
+Output: jump
+
+--- Call #300 | File: 001048 ---
+Input:
+a person running while making the small circle#a/DET person/NOUN run/VERB while/SCONJ make/VERB the/DET small/ADJ circle/NOUN#0.0#0.0
+a man is running in a circular motion.#a/DET man/NOUN is/AUX run/VERB in/ADP a/DET circular/ADJ motion/NOUN#0.0#0.0
+a person jogging in circle's#a/DET person/NOUN jog/VERB in/ADP circle/PROPN#0.0#0.0
+
+Output: run
+
+--- Call #305 | File: 001069 ---
+Input:
+a person standing up straight and putting both right and left hands together multiple times.#a/DET person/NOUN stand/VERB up/ADP straight/ADV and/CCONJ put/VERB both/CCONJ right/ADJ and/CCONJ left/VERB hand/NOUN together/ADV multiple/ADJ time/NOUN#0.0#0.0
+a man claps with his hands.#a/DET man/NOUN clap/VERB with/ADP his/DET hand/NOUN#0.0#0.0
+a person is clapping their hands.#a/DET person/NOUN is/AUX clap/VERB their/DET hand/NOUN#0.0#0.0
+
+Output: remove
+
+--- Call #310 | File: 001089 ---
+Input:
+a person walks forward 7 steps then turns to their right and stops.#a/DET person/NOUN walk/VERB forward/ADV step/NOUN then/ADV turn/VERB to/ADP their/DET right/NOUN and/CCONJ stop/NOUN#0.0#0.0
+a person walks forward, then turns 90 degrees to the right and stands still.#a/DET person/NOUN walk/VERB forward/ADV then/ADV turn/VERB degree/NOUN to/ADP the/DET right/NOUN and/CCONJ stand/VERB still/ADV#0.0#0.0
+a person walks forward, turns to his right and stops.#a/DET person/NOUN walk/VERB forward/ADV turn/VERB to/ADP his/DET right/NOUN and/CCONJ stop/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #315 | File: 001107 ---
+Input:
+a person jumps in place while moving their arms back and forth#a/DET person/NOUN jump/VERB in/ADP place/NOUN while/SCONJ move/VERB their/DET arm/NOUN back/ADV and/CCONJ forth/ADV#0.0#0.0
+person prepares and kick jumps back and forth#person/NOUN prepare/VERB and/CCONJ kick/VERB jump/VERB back/ADV and/CCONJ forth/ADV#0.0#0.0
+a person loosens up before bringing each leg forward and backward in a jumping motion, then touches opposite elbows to opposite knees.#a/DET person/NOUN loosen/VERB up/ADP before/ADP bring/VERB each/DET leg/NOUN forward/ADV and/CCONJ backward/ADV in/ADP a/DET jumping/NOUN motion/NOUN then/ADV touch/VERB opposite/ADJ elbow/NOUN to/ADP opposite/ADJ knee/NOUN#0.0#0.0
+
+Output: jump
+
+--- Call #320 | File: 001139 ---
+Input:
+a person stands with their left foot in front of their right and wobbles to their right to maintain balance#a/DET person/NOUN stand/VERB with/ADP their/DET left/ADJ foot/NOUN in/ADP front/NOUN of/ADP their/DET right/NOUN and/CCONJ wobble/NOUN to/ADP their/DET right/NOUN to/PART maintain/VERB balance/NOUN#0.0#0.0
+figure has one foot in front of the other and is leaning back and forth. as if trying to maintain balance.#figure/NOUN has/AUX one/NUM foot/NOUN in/ADP front/NOUN of/ADP the/DET other/ADJ and/CCONJ is/AUX lean/VERB back/ADV and/CCONJ forth/ADV as/SCONJ if/SCONJ try/VERB to/PART maintain/VERB balance/NOUN#0.0#0.0
+a person is balancing on a tight rope#a/DET person/NOUN is/AUX balance/VERB on/ADP a/DET tight/ADJ rope/NOUN#0.0#0.0
+
+Output: tightrope walk
+
+--- Call #325 | File: 001153 ---
+Input:
+a person walks a tightrope, swaying slightly from side-to-side as he maintains his balance.#a/DET person/NOUN walk/VERB a/DET tightrope/NOUN sway/VERB slightly/ADV from/ADP sidetoside/NOUN as/SCONJ he/PRON maintain/VERB his/DET balance/NOUN#0.0#0.0
+a person walking in a straight line placing the left foot directly in front of the right foot and then placing the right foot directly in front of the left foot.#a/DET person/NOUN walk/VERB in/ADP a/DET straight/ADJ line/NOUN place/VERB the/DET left/ADJ foot/NOUN directly/ADV in/ADP front/NOUN of/ADP the/DET right/ADJ foot/NOUN and/CCONJ then/ADV place/VERB the/DET right/ADJ foot/NOUN directly/ADV in/ADP front/NOUN of/ADP the/DET left/ADJ foot/NOUN#0.0#0.0
+the person is walking like on a plank.#the/DET person/NOUN is/AUX walk/VERB like/INTJ on/ADP a/DET plank/NOUN#0.0#0.0
+
+Output: tightrope walk
+
+--- Call #330 | File: 001167 ---
+Input:
+a person walks forward starting with their left foot for 5 steps.#a/DET person/NOUN walk/VERB forward/ADV start/VERB with/ADP their/DET left/ADJ foot/NOUN for/ADP step/NOUN#0.0#0.0
+the person is walking forward.#the/DET person/NOUN is/AUX walk/VERB forward/ADV#0.0#0.0
+a person walks forward and then stops after a few steps.#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ then/ADV stop/VERB after/ADP a/DET few/ADJ step/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #335 | File: 001186 ---
+Input:
+a person jumps one time and then walks forward.#a/DET person/NOUN jump/VERB one/NUM time/NOUN and/CCONJ then/ADV walk/VERB forward/ADV#0.0#0.0
+a person hops in the air and then walks foward.#a/DET person/NOUN hop/VERB in/ADP the/DET air/NOUN and/CCONJ then/ADV walk/VERB foward/ADJ#0.0#0.0
+a person jumps straight up, then walks a few steps forward.#a/DET person/NOUN jump/VERB straight/ADV up/ADV then/ADV walk/VERB a/DET few/ADJ step/NOUN forward/ADV#0.0#0.0
+
+Output: jump
+
+--- Call #340 | File: 001210 ---
+Input:
+from a standing position, the person quickly runs four steps forward before stopping#from/ADP a/DET standing/ADJ position/NOUN the/DET person/NOUN quickly/ADV run/VERB four/NUM step/NOUN forward/ADV before/ADP stop/VERB#0.0#0.0
+a man runs forward in a straight line in a quick pace.#a/DET man/NOUN run/VERB forward/ADV in/ADP a/DET straight/ADJ line/NOUN in/ADP a/DET quick/ADJ pace/NOUN#1.0#4.0
+a person runs straight forward#a/DET person/NOUN run/VERB straight/ADV forward/ADV#0.0#0.0
+
+Output: run
+
+--- Call #345 | File: 001224 ---
+Input:
+a person walks forward and stumbles when walking.#a/DET person/NOUN walk/VERB forward/ADV and/CCONJ stumble/NOUN when/ADV walk/VERB#0.0#0.0
+as a person walks forward he is pushed by someone from behind, stumbles, and recovers his balance.#as/SCONJ a/DET person/NOUN walk/VERB forward/ADV he/PRON is/AUX push/VERB by/ADP someone/PRON from/ADP behind/ADV stumble/NOUN and/CCONJ recover/VERB his/DET balance/NOUN#0.0#0.0
+a man walks forward at a slow pace and trips but catches himself.#a/DET man/NOUN walk/VERB forward/ADV at/ADP a/DET slow/ADJ pace/NOUN and/CCONJ trip/NOUN but/CCONJ catch/VERB himself/PRON#1.0#3.0
+
+Output: trip
+
+--- Call #350 | File: 001234 ---
+Input:
+he does a pose directally#he/PRON does/AUX a/DET pose/NOUN directally/ADV#0.0#0.0
+a figure moves lower half outwards then turns.#a/DET figure/NOUN move/VERB lower/ADJ half/NOUN outward/NOUN then/ADV turn/VERB#0.0#0.0
+the figure strikes a blocker pose and then turns to his other side.#the/DET figure/NOUN strike/VERB a/DET blocker/NOUN pose/NOUN and/CCONJ then/ADV turn/VERB to/ADP his/DET other/ADJ side/NOUN#0.0#0.0
+
+Output: turn
+
+--- Call #355 | File: 001258 ---
+Input:
+someone is throwing an object#someone/PRON is/AUX throw/VERB an/DET object/NOUN#0.0#0.0
+character imitatates throwing a ball with left hand and then steps forward.#character/NOUN imitatate/VERB throw/VERB a/DET ball/NOUN with/ADP left/ADJ hand/NOUN and/CCONJ then/ADV step/VERB forward/ADV#1.0#5.0
+a person steps forward with their right foot and throws or pushes something with their left hand.#a/DET person/NOUN step/VERB forward/ADV with/ADP their/DET right/ADJ foot/NOUN and/CCONJ throw/NOUN or/CCONJ push/VERB something/PRON with/ADP their/DET left/ADJ hand/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #360 | File: 001289 ---
+Input:
+the person is picking up and moving something.#the/DET person/NOUN is/AUX pick/VERB up/ADP and/CCONJ move/VERB something/PRON#0.0#0.0
+a person puts down a large object, then walks forwards.#a/DET person/NOUN put/VERB down/ADP a/DET large/ADJ object/NOUN then/ADV walk/VERB forwards/ADV#0.0#0.0
+person puts something on ground then takes 8 steps forward#person/NOUN put/VERB something/PRON on/ADP ground/NOUN then/ADV take/VERB step/NOUN forward/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #365 | File: 001300 ---
+Input:
+a person standing with legs apart, swats, bending at the knees and holding arms forward.#a/DET person/NOUN stand/VERB with/ADP leg/NOUN apart/ADV swat/NOUN bend/VERB at/ADP the/DET knee/NOUN and/CCONJ hold/VERB arm/NOUN forward/ADV#0.0#0.0
+a figure squatting whilst hold both arms out towards the front#a/DET figure/NOUN squat/VERB whilst/SCONJ hold/VERB both/DET arm/NOUN out/ADP towards/ADP the/DET front/NOUN#0.0#0.0
+a person is doing squads.#a/DET person/NOUN is/AUX do/VERB squad/NOUN#0.0#0.0
+
+Output: squat
+
+--- Call #370 | File: 001310 ---
+Input:
+a person relaxes arms down to side of body, then makes a drinking motion with their right hand.#a/DET person/NOUN relax/VERB arm/NOUN down/ADV to/ADP side/NOUN of/ADP body/NOUN then/ADV make/VERB a/DET drinking/NOUN motion/NOUN with/ADP their/DET right/ADJ hand/NOUN#0.0#0.0
+a person greets someone by raising their hand to their head.#a/DET person/NOUN greet/VERB someone/PRON by/ADP raise/VERB their/DET hand/NOUN to/ADP their/DET head/NOUN#0.0#0.0
+a person raises his hand to his head twice in an organized and stiff manner#a/DET person/NOUN raise/VERB his/DET hand/NOUN to/ADP his/DET head/NOUN twice/ADV in/ADP an/DET organized/ADJ and/CCONJ stiff/ADJ manner/NOUN#0.0#0.0
+
+Output: remove
+
+--- Call #375 | File: 001321 ---
+Input:
+a man is square dancing with a partner.#a/DET man/NOUN is/AUX square/ADJ dancing/NOUN with/ADP a/DET partner/NOUN#0.0#0.0
+a person does the ring around the rosie dance holding someone’s right hand then left hand.#a/DET person/NOUN does/AUX the/DET ring/NOUN around/ADP the/DET rosie/NOUN dance/NOUN hold/VERB someone/PRON right/ADJ hand/NOUN then/ADV left/VERB hand/NOUN#0.0#0.0
+a person junps  and skips in circles#a/DET person/NOUN junps/NOUN and/CCONJ skip/VERB in/ADP circle/NOUN#0.0#0.0
+
+Output: dance
+
+--- Call #380 | File: 001346 ---
+Input:
+a person tip toeing in an l shape figure to the left.#a/DET person/NOUN tip/NOUN toe/VERB in/ADP an/DET l/NOUN shape/NOUN figure/NOUN to/ADP the/DET left/NOUN#0.0#0.0
+a man tiptoes forward and then towards the right.#a/DET man/NOUN tiptoe/VERB forward/ADV and/CCONJ then/ADV towards/ADP the/DET right/NOUN#0.0#0.0
+the person is sneaking around.#the/DET person/NOUN is/AUX sneak/VERB around/ADV#0.0#0.0
+
+Output: sneak
+
+--- Call #385 | File: 001377 ---
+Input:
+a man is running in place before moving the left.#a/DET man/NOUN is/AUX run/VERB in/ADP place/NOUN before/ADP move/VERB the/DET left/NOUN#0.0#0.0
+the person is running in place.#the/DET person/NOUN is/AUX run/VERB in/ADP place/NOUN#0.0#0.0
+someone who is doing zumba#someone/PRON who/PRON is/AUX do/VERB zumba/PROPN#0.0#0.0
+
+Output: run
+
+--- Call #390 | File: 001398 ---
+Input:
+stepping sideways up to the right and back down to the left.#step/VERB sideways/ADV up/ADP to/ADP the/DET right/NOUN and/CCONJ back/ADV down/ADV to/ADP the/DET left/NOUN#0.0#0.0
+the person is going on step ladders.#the/DET person/NOUN is/AUX go/VERB on/ADP step/NOUN ladder/NOUN#0.0#0.0
+a person walking up stairs#a/DET person/NOUN walk/VERB up/ADP stair/NOUN#0.0#0.0
+
+Output: climb
+
+--- Call #395 | File: 001417 ---
+Input:
+a person is disco dancing.#a/DET person/NOUN is/AUX disco/NOUN dancing/NOUN#0.0#0.0
+kicks the right foot low and across the body, happily flings the right hand to the side of the head, and then shuffles small steps forward with moving hips.#kick/NOUN the/DET right/ADJ foot/NOUN low/ADJ and/CCONJ across/ADP the/DET body/NOUN happily/ADV fling/VERB the/DET right/ADJ hand/NOUN to/ADP the/DET side/NOUN of/ADP the/DET head/NOUN and/CCONJ then/ADV shuffle/VERB small/ADJ step/NOUN forward/ADV with/ADP move/VERB hip/NOUN#0.0#0.0
+a person dances like michael jackson.#a/DET person/NOUN dance/VERB like/SCONJ michael/PROPN jackson/PROPN#0.0#0.0
+
+Output: dance
+
+--- Call #400 | File: 001434 ---
+Input:
+a person walks in a counter clockwise motion stopping before completing a full circle.#a/DET person/NOUN walk/VERB in/ADP a/DET counter/NOUN clockwise/NOUN motion/NOUN stop/VERB before/ADP complete/VERB a/DET full/ADJ circle/NOUN#0.0#0.0
+a person walks in a counter clock wise circle#a/DET person/NOUN walk/VERB in/ADP a/DET counter/ADJ clock/NOUN wise/ADJ circle/NOUN#0.0#0.0
+a man walks in an anti-clockwise circle at normal speed#a/DET man/NOUN walk/VERB in/ADP an/DET anticlockwise/NOUN circle/NOUN at/ADP normal/ADJ speed/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #405 | File: 001451 ---
+Input:
+a man side steps to the left and the walks forward beofre turning around and walking back.#a/DET man/NOUN side/NOUN step/NOUN to/ADP the/DET left/NOUN and/CCONJ the/DET walk/NOUN forward/ADV beofre/VERB turn/VERB around/ADP and/CCONJ walk/VERB back/ADV#0.0#0.0
+man takes a long side step, then walks around.#man/NOUN take/VERB a/DET long/ADJ side/NOUN step/NOUN then/ADV walk/VERB around/ADV#0.0#0.0
+a person walks forward, turns, and walks back#a/DET person/NOUN walk/VERB forward/ADV turn/VERB and/CCONJ walk/VERB back/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #410 | File: 001463 ---
+Input:
+a person walks briskly forward, swinging arms to his side.#a/DET person/NOUN walk/VERB briskly/ADV forward/ADV swinge/VERB arm/NOUN to/ADP his/DET side/NOUN#0.0#0.0
+a person is swinging their arms as they are walking forward.#a/DET person/NOUN is/AUX swinge/VERB their/DET arm/NOUN as/SCONJ they/PRON are/AUX walk/VERB forward/ADV#0.0#0.0
+a person walks straight with elegance.#a/DET person/NOUN walk/VERB straight/ADV with/ADP elegance/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #415 | File: 001484 ---
+Input:
+a person hopping around in a complete circle on one foot, before doing the same with the other foot.#a/DET person/NOUN hop/VERB around/ADV in/ADP a/DET complete/ADJ circle/NOUN on/ADP one/NUM foot/NOUN before/ADP do/VERB the/DET same/ADJ with/ADP the/DET other/ADJ foot/NOUN#0.0#0.0
+a person hops on one foot in a circle while switching feet every half circle#a/DET person/NOUN hop/VERB on/ADP one/NUM foot/NOUN in/ADP a/DET circle/NOUN while/SCONJ switch/VERB foot/NOUN every/DET half/NOUN circle/NOUN#0.0#0.0
+a person hops on the right foot for half of a circle around the room, then switches to the left foot for the other half of a circle, then switches back to the right foot for another half circle#a/DET person/NOUN hop/VERB on/ADP the/DET right/ADJ foot/NOUN for/ADP half/NOUN of/ADP a/DET circle/NOUN around/ADP the/DET room/NOUN then/ADV switch/VERB to/ADP the/DET left/ADJ foot/NOUN for/ADP the/DET other/ADJ half/NOUN of/ADP a/DET circle/NOUN then/ADV switch/VERB back/ADV to/ADP the/DET right/ADJ foot/NOUN for/ADP another/DET half/ADJ circle/NOUN#0.0#0.0
+
+Output: hop
+
+--- Call #420 | File: 001513 ---
+Input:
+a person makes tennis motiins left and right.#a/DET person/NOUN make/VERB tennis/NOUN motiin/NOUN left/VERB and/CCONJ right/INTJ#0.0#0.0
+the person swings something with both arms.#the/DET person/NOUN swing/VERB something/PRON with/ADP both/DET arm/NOUN#0.0#0.0
+someone is golfing and swinging arms#someone/PRON is/AUX golf/VERB and/CCONJ swinge/VERB arm/NOUN#0.0#0.0
+
+Output: remove
+
+--- Call #425 | File: 001533 ---
+Input:
+person walks forward and picks something up with both hands#person/NOUN walk/VERB forward/ADV and/CCONJ pick/VERB something/PRON up/ADP with/ADP both/DET hand/NOUN#0.0#0.0
+person walks forward and crouches down.#person/NOUN walk/VERB forward/ADV and/CCONJ crouch/NOUN down/ADP#0.0#0.0
+someone walk up to pick something up off the floor#someone/PRON walk/VERB up/ADV to/PART pick/VERB something/PRON up/ADP off/ADP the/DET floor/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #430 | File: 001555 ---
+Input:
+he walks forward directly then stops#he/PRON walk/VERB forward/ADV directly/ADV then/ADV stop/VERB#0.0#0.0
+a man runs to a stop and then turns back by his left side and does a cartwheel.#a/DET man/NOUN run/VERB to/ADP a/DET stop/NOUN and/CCONJ then/ADV turn/VERB back/ADV by/ADP his/DET left/ADJ side/NOUN and/CCONJ does/AUX a/DET cartwheel/NOUN#0.0#0.0
+a person walks forward, turns, then does a cartwheel#a/DET person/NOUN walk/VERB forward/ADV turn/VERB then/ADV does/AUX a/DET cartwheel/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #435 | File: 001581 ---
+Input:
+a person moves in a square while leaping#a/DET person/NOUN move/VERB in/ADP a/DET square/NOUN while/SCONJ leap/VERB#0.0#0.0
+the man leaps 4 times in a clockwise square.#the/DET man/NOUN leap/VERB time/NOUN in/ADP a/DET clockwise/ADJ square/NOUN#0.0#0.0
+a man leaps around to make a square shape.#a/DET man/NOUN leap/VERB around/ADV to/PART make/VERB a/DET square/ADJ shape/NOUN#0.0#0.0
+
+Output: jump
+
+--- Call #440 | File: 001602 ---
+Input:
+the man stood up from the chair and walked towards the living room.#the/DET man/NOUN stand/VERB up/ADP from/ADP the/DET chair/NOUN and/CCONJ walk/VERB towards/ADP the/DET living/NOUN room/NOUN#0.0#0.0
+a man walks forward before coming to a stop.#a/DET man/NOUN walk/VERB forward/ADV before/ADP come/VERB to/ADP a/DET stop/NOUN#0.0#0.0
+person standing walks in a curve from left to right#person/NOUN stand/VERB walk/VERB in/ADP a/DET curve/NOUN from/ADP left/VERB to/ADP right/ADJ#0.0#0.0
+
+Output: walk
+
+--- Call #445 | File: 001614 ---
+Input:
+a person walks while dragging his feet.#a/DET person/NOUN walk/VERB while/SCONJ drag/VERB his/DET foot/NOUN#0.0#0.0
+a person staggers around slowly in an anticlockwise movement#a/DET person/NOUN stagger/VERB around/ADV slowly/ADV in/ADP an/DET anticlockwise/NOUN movement/NOUN#0.0#0.0
+the person is walking with a limp.#the/DET person/NOUN is/AUX walk/VERB with/ADP a/DET limp/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #450 | File: 001623 ---
+Input:
+a person talking on his phone and walking in circles .#a/DET person/NOUN talk/VERB on/ADP his/DET phone/NOUN and/CCONJ walk/VERB in/ADP circle/NOUN#0.0#0.0
+a person walks in a circle clockwise while holding something up to their left ear.#a/DET person/NOUN walk/VERB in/ADP a/DET circle/NOUN clockwise/NOUN while/SCONJ hold/VERB something/PRON up/ADP to/ADP their/DET left/ADJ ear/NOUN#0.0#0.0
+a oerson walks in a clockwise circle while holding up the left arm at shoulder height.#a/DET oerson/NOUN walk/VERB in/ADP a/DET clockwise/NOUN circle/NOUN while/SCONJ hold/VERB up/ADP the/DET left/ADJ arm/NOUN at/ADP shoulder/NOUN height/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #455 | File: 001635 ---
+Input:
+a person folding their arms#a/DET person/NOUN fold/VERB their/DET arm/NOUN#0.0#0.0
+someone folds their arms akimbo, hands in the crook of their elbows.#someone/PRON fold/VERB their/DET arm/NOUN akimbo/NOUN hand/NOUN in/ADP the/DET crook/NOUN of/ADP their/DET elbow/NOUN#0.0#0.0
+a person crosses their arms in front of them#a/DET person/NOUN cross/VERB their/DET arm/NOUN in/ADP front/NOUN of/ADP them/PRON#0.0#0.0
+
+Output: remove
+
+--- Call #460 | File: 001648 ---
+Input:
+a man uses his right hand to throw somthing with force.#a/DET man/NOUN use/VERB his/DET right/ADJ hand/NOUN to/PART throw/VERB somthe/VERB with/ADP force/NOUN#0.0#0.0
+a person throws something then moves forward#a/DET person/NOUN throw/VERB something/PRON then/ADV move/VERB forward/ADV#0.0#0.0
+the person steps back on their right leg before pitching a baseball forward.#the/DET person/NOUN step/VERB back/ADV on/ADP their/DET right/ADJ leg/NOUN before/ADP pitch/VERB a/DET baseball/NOUN forward/ADV#0.0#0.0
+
+Output: step
+
+--- Call #465 | File: 001681 ---
+Input:
+the person is throwing football or soemthing.#the/DET person/NOUN is/AUX throw/VERB football/NOUN or/CCONJ soemthing/NOUN#0.0#0.0
+someone is swingnig a tennis racket#someone/PRON is/AUX swingnig/PROPN a/DET tennis/NOUN racket/NOUN#0.0#0.0
+a person makes a forward smashing gesture with their right arm#a/DET person/NOUN make/VERB a/DET forward/ADV smash/VERB gesture/NOUN with/ADP their/DET right/ADJ arm/NOUN#0.0#0.0
+
+Output: remove
+
+--- Call #470 | File: 001696 ---
+Input:
+a person is doing karate kicks.#a/DET person/NOUN is/AUX do/VERB karate/NOUN kick/NOUN#0.0#0.0
+a person aggressively kneeing and kicking.#a/DET person/NOUN aggressively/ADV kneee/VERB and/CCONJ kick/VERB#0.0#0.0
+someone does two right knee raises before doing a full right leg kick in a counter clockwise direction.#someone/PRON does/AUX two/NUM right/ADJ knee/NOUN raise/VERB before/ADP do/VERB a/DET full/ADJ right/ADJ leg/NOUN kick/NOUN in/ADP a/DET counter/NOUN clockwise/NOUN direction/NOUN#0.0#0.0
+
+Output: kick
+
+--- Call #475 | File: 001715 ---
+Input:
+a person who is stepping in the shape of a square#a/DET person/NOUN who/PRON is/AUX step/VERB in/ADP the/DET shape/NOUN of/ADP a/DET square/NOUN#0.0#0.0
+person standing steps in a square formation starting with right foot#person/NOUN stand/VERB step/NOUN in/ADP a/DET square/ADJ formation/NOUN start/VERB with/ADP right/ADJ foot/NOUN#0.0#0.0
+a man steps forward and then backward repeatedly.#a/DET man/NOUN step/VERB forward/ADV and/CCONJ then/ADV backward/ADV repeatedly/ADV#0.0#0.0
+
+Output: step
+
+--- Call #480 | File: 001746 ---
+Input:
+a person steps forwards, turns around on their left foot and walk back.#a/DET person/NOUN step/VERB forwards/ADV turn/VERB around/ADV on/ADP their/DET left/ADJ foot/NOUN and/CCONJ walk/VERB back/ADV#0.0#0.0
+a person walks clockwise to their right.#a/DET person/NOUN walk/VERB clockwise/ADJ to/ADP their/DET right/NOUN#0.0#0.0
+person takes two steps, turns 180 degrees, takes two more steps.#person/NOUN take/VERB two/NUM step/NOUN turn/VERB degree/NOUN take/VERB two/NUM more/ADJ step/NOUN#0.0#6.0
+
+Output: walk
+
+--- Call #485 | File: 001759 ---
+Input:
+he tries to clean the floor#he/PRON try/VERB to/PART clean/VERB the/DET floor/NOUN#0.0#0.0
+person takes step down then two steps on the same spot and then big jump dow and half turn to the right#person/NOUN take/VERB step/NOUN down/ADP then/ADV two/NUM step/NOUN on/ADP the/DET same/ADJ spot/NOUN and/CCONJ then/ADV big/ADJ jump/NOUN dow/PROPN and/CCONJ half/NOUN turn/NOUN to/ADP the/DET right/NOUN#0.0#0.0
+a person walks forwards, and steps up and over a structure.#a/DET person/NOUN walk/VERB forwards/ADV and/CCONJ step/VERB up/ADV and/CCONJ over/ADP a/DET structure/NOUN#0.0#0.0
+
+Output: step
+
+--- Call #490 | File: 001787 ---
+Input:
+a person crosses their feet and kneels down at the same time.#a/DET person/NOUN cross/VERB their/DET foot/NOUN and/CCONJ kneel/VERB down/ADP at/ADP the/DET same/ADJ time/NOUN#0.0#0.0
+a person sits down and gets back up.#a/DET person/NOUN sit/VERB down/ADV and/CCONJ get/VERB back/ADV up/ADV#0.0#0.0
+a person attempts to sit cross legged but then stands up.#a/DET person/NOUN attempt/VERB to/PART sit/VERB cross/NOUN legged/ADJ but/CCONJ then/ADV stand/VERB up/ADP#0.0#0.0
+
+Output: remove
+
+--- Call #495 | File: 001798 ---
+Input:
+person carefully takes two steps backwards.#person/NOUN carefully/ADV take/VERB two/NUM step/NOUN backwards/ADV#0.0#8.0
+person turns body slightly and moves backwards#person/NOUN turn/VERB body/NOUN slightly/ADV and/CCONJ move/NOUN backwards/ADV#0.0#0.0
+a man cautiously take several steps backwards.#a/DET man/NOUN cautiously/ADV take/VERB several/ADJ step/NOUN backwards/ADV#0.0#0.0
+
+Output: step
+
+--- Call #500 | File: 001810 ---
+Input:
+a person quickly taking three steps down.#a/DET person/NOUN quickly/ADV take/VERB three/NUM step/NOUN down/ADV#0.0#0.0
+a person quickly walks forward and then stops.#a/DET person/NOUN quickly/ADV walk/VERB forward/ADV and/CCONJ then/ADV stop/VERB#0.0#0.0
+a man walks 3 steps forward#a/DET man/NOUN walk/VERB step/NOUN forward/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #1000 | Group: walk | File: 005094 ---
+Input:
+walking forward and then to the side.#walk/VERB forward/ADV and/CCONJ then/ADV to/ADP the/DET side/NOUN#0.0#0.0
+a person walks to the left side.#a/DET person/NOUN walk/VERB to/ADP the/DET left/ADJ side/NOUN#0.0#0.0
+person is walking and veering left#person/NOUN is/AUX walk/VERB and/CCONJ veer/VERB left/ADV#0.0#0.0
+
+Output: walk
+
+--- Call #2000 | Group: walk | File: 010225 ---
+Input:
+the person is walking holding his head.#the/DET person/NOUN is/AUX walk/VERB hold/VERB his/DET head/NOUN#0.0#0.0
+a figure paces while on the phone.#a/DET figure/NOUN pace/VERB while/SCONJ on/ADP the/DET phone/NOUN#0.0#0.0
+a person walks around while talking on their phone.#a/DET person/NOUN walk/VERB around/ADV while/SCONJ talk/VERB on/ADP their/DET phone/NOUN#0.0#0.0
+
+Output: walk
+
+--- Call #3000 | Group: jump | File: 010919 ---
+Input:
+a person jumps up and down on their toes#a/DET person/NOUN jump/VERB up/ADV and/CCONJ down/ADV on/ADP their/DET toe/NOUN#0.0#0.0
+the person is jiggling on their toes with their hands up#the/DET person/NOUN is/AUX jiggle/VERB on/ADP their/DET toe/NOUN with/ADP their/DET hand/NOUN up/ADP#0.0#0.0
+a person puts both hands up and lightly jumps up and down.#a/DET person/NOUN put/VERB both/DET hand/NOUN up/ADV and/CCONJ lightly/ADV jump/VERB up/ADV and/CCONJ down/ADV#0.0#0.0
+
+Output: jump
+
+--- Call #4000 | Group: sidestep | File: 001343 ---
+Input:
+a person takes a step to the left then swings their right arm#a/DET person/NOUN take/VERB a/DET step/NOUN to/ADP the/DET left/NOUN then/ADV swing/VERB their/DET right/ADJ arm/NOUN#0.0#0.0
+a person makes a throwing motion with their right arm.#a/DET person/NOUN make/VERB a/DET throwing/NOUN motion/NOUN with/ADP their/DET right/ADJ arm/NOUN#0.0#0.0
+a person throws something with his right hand.#a/DET person/NOUN throw/VERB something/PRON with/ADP his/DET right/ADJ hand/NOUN#0.0#0.0
+
+Output: remove
+
+--- Call #5000 | Group: squat | File: 012346 ---
+Input:
+a person squats and puts their hands together in front of them.#a/DET person/NOUN squat/VERB and/CCONJ put/VERB their/DET hand/NOUN together/ADV in/ADP front/NOUN of/ADP them/PRON#0.0#0.0
+the person squatted down to look at something.#the/DET person/NOUN squat/VERB down/ADP to/PART look/VERB at/ADP something/PRON#0.0#0.0
+moving arms down near chest.#move/VERB arm/NOUN down/ADV near/SCONJ chest/NOUN#0.0#0.0
+
+Output: squat
+
+--- Call #1000 | Group: walk | File: 005861 ---
+Input:
+a person side steps to the front right and then swag walks to the back left.#a/DET person/NOUN side/NOUN step/NOUN to/ADP the/DET front/ADJ right/ADV and/CCONJ then/ADV swag/VERB walk/VERB to/ADP the/DET back/NOUN left/NOUN#0.0#0.0
+this person steps foot over foot, turns to left and walks briskly.#this/DET person/NOUN step/VERB foot/NOUN over/ADP foot/NOUN turn/VERB to/ADP left/NOUN and/CCONJ walk/VERB briskly/ADV#0.0#0.0
+a person walks sideways, then walks confidently in a diagonal line.#a/DET person/NOUN walk/VERB sideways/ADV then/ADV walk/VERB confidently/ADV in/ADP a/DET diagonal/ADJ line/NOUN#0.0#0.0
+
+Output: swagger
+
+ERROR AT FILE: 006376 | Group: walk
+REASON: unsupported operand type(s) for +: 'dict' and 'str'
+
+ERROR AT FILE: 006598 | Group: jump
+REASON: unsupported operand type(s) for +: 'dict' and 'str'
+
+ERROR AT FILE: 007864 | Group: run
+REASON: unsupported operand type(s) for +: 'dict' and 'str'
+
+--- Call #2000 | Group: dance | File: 012478 ---
+Input:
+the person is doing the salsa dance.#the/DET person/NOUN is/AUX do/VERB the/DET salsa/NOUN dance/NOUN#0.0#0.0
+a person is dancing in a circle.#a/DET person/NOUN is/AUX dance/VERB in/ADP a/DET circle/NOUN#0.0#0.0
+a character shuffles towards camera and proceeds to dances around  in a clockwise circle.#a/DET character/NOUN shuffle/VERB towards/ADP camera/NOUN and/CCONJ proceed/VERB to/ADP dance/NOUN around/ADP in/ADP a/DET clockwise/ADJ circle/NOUN#0.0#0.0
+
+Output: salsa
+
+ERROR AT FILE: 005237 | Group: step
+REASON: unsupported operand type(s) for +: 'dict' and 'str'
+
+ERROR AT FILE: 007274 | Group: stumble
+REASON: unsupported operand type(s) for +: 'dict' and 'str'
+
+ERROR AT FILE: 000783 | Group: sneak
+REASON: unsupported operand type(s) for +: 'dict' and 'str'
+
+ERROR AT FILE: 011287 | Group: backpedal
+REASON: unsupported operand type(s) for +: 'dict' and 'str'
+
+--- Call #3000 | Group: march | File: 007039 ---
+Input:
+a person marches forward with their arms swinging at their sides.#a/DET person/NOUN march/VERB forward/ADV with/ADP their/DET arm/NOUN swinge/VERB at/ADP their/DET side/NOUN#0.0#0.0
+a man walks forward through the streets flippantly.#a/DET man/NOUN walk/VERB forward/ADV through/ADP the/DET street/NOUN flippantly/ADV#0.0#0.0
+this person marches at a quick pace.#this/DET person/NOUN march/VERB at/ADP a/DET quick/ADJ pace/NOUN#0.0#0.0
+
+Output: flippant
+
+ERROR AT FILE: 004396 | Group: lift
+REASON: 'lift'
+
+ERROR AT FILE: 001150 | Group: raise
+REASON: 'raise'
+
+ERROR AT FILE: 004889 | Group: cross
+REASON: 'cross'
+
+ERROR AT FILE: 004396 | Group: lift
+REASON: 'lift'
+
+ERROR AT FILE: 004889 | Group: cross
+REASON: 'cross'
+
+ERROR AT FILE: 004889 | Group: cross
+REASON: 'cross'
+
+ERROR AT FILE: 001150 | Group: raise
+REASON: 'raise'
+
+ERROR AT FILE: 004889 | Group: cross
+REASON: 'cross'
+

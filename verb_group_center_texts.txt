@@ -1,0 +1,349 @@
+================================================================================
+VERB GROUP: walk (2663 files)
+================================================================================
+
+--- #3: 005643 (dist: 34.15) --- NDE
+a person walks in a curve to their right.
+a person walks forward then to the right.
+a person walks in a bend shape to the right.
+
+================================================================================
+VERB GROUP: jump (554 files)
+================================================================================
+
+--- #1 Center: 009346 (dist: 27.92) --- NDE
+the person jumped  2  steps  forward.
+the man is making 2 jumps
+person jumps forward and to the right two times.
+
+================================================================================
+VERB GROUP: run (313 files)
+================================================================================
+
+--- #3: 003495 (dist: 32.68) --- NDE
+a person speed walking in a forward motion
+person runs forward a few paces, slightly veering to the right.
+a person runs straight forward.
+
+================================================================================
+VERB GROUP: sidestep (210 files)
+================================================================================
+
+--- #1 Center: 001242 (dist: 25.36) --- NDE
+a man moves from left to right several times.
+the person is side stepping.
+shuffling back and forth.
+
+================================================================================
+VERB GROUP: kick (204 files)
+================================================================================
+
+--- #2: 003620 (dist: 38.21) --- NDE
+kicking foot while standing.
+a person lightly kicks with their right and left leg.
+a man swings his left leg in front of him and then his right leg.
+
+================================================================================
+VERB GROUP: jog (198 files)
+================================================================================
+
+--- #1 Center: 008707 (dist: 28.63) --- NDE
+a person jogs on the spot
+a person jogs in place.
+the person jogs in place
+================================================================================
+VERB GROUP: dance (189 files)
+================================================================================
+
+--- #2: 006763 (dist: 42.00) --- NDE
+a person takes a step backwards and then walks in a square taking large steps.
+a man appears to be doing the waltz dance.
+person alternating one step forward and one step backward
+
+================================================================================
+VERB GROUP: step back (140 files)
+================================================================================
+
+--- #1 Center: 012985 (dist: 23.39) --- NDE
+walking backwards and then stopping.
+a person is walking backwards slowly.
+a man steps backwards slowly.
+
+================================================================================
+VERB GROUP: step (139 files)
+================================================================================
+
+--- #1 Center: 010771 (dist: 28.46) --- NDE
+a man climbs over a stool and then sits on it.
+a person walks and sits down with his hands by his lap.
+a figure step over something , sitting on top of it and then pats it a few times with his right hand
+
+================================================================================
+VERB GROUP: squat (101 files)
+================================================================================
+
+--- #1 Center: 007362 (dist: 19.40) --- NDE
+a person squats with their arms above their head.
+a man squats down and up while holding something  above his head.
+a figure crouches and crumples in frustration, gesturing wildly
+
+================================================================================
+VERB GROUP: stumble (95 files)
+================================================================================
+
+--- #1 Center: 012902 (dist: 36.43) --- NDE
+a man quickly takes one step back.
+person appears to be slightly pushed backward.
+a person is pushed from the front, stumbles back, and regains his balance.
+
+================================================================================
+VERB GROUP: crawl (76 files)
+================================================================================
+
+--- #1 Center: 001820 (dist: 28.44) --- NDE
+the person goes from a standing position to a crawl position where the palms and knees touch the ground.
+a person gets down onto their hands and knees
+a man gets down on all fours.
+
+================================================================================
+VERB GROUP: stand up (65 files)
+================================================================================
+
+--- #1 Center: 011728 (dist: 39.75) --- NDE
+a person sits down, then gets back up and walks slightly forward.
+a person sits down and stands up.
+the person sat down and is looking at something.
+================================================================================
+VERB GROUP: climb (59 files)
+================================================================================
+
+--- #1 Center: 004748 (dist: 25.64) --- NDE
+a person walks up the stairs.
+a person walks forward and climbs on the stairs.
+a person is walking forward one step, and then appears to walk up 5 steps in the same direction.
+================================================================================
+VERB GROUP: hop (59 files)
+================================================================================
+
+--- #2: 001130 (dist: 25.59) --- NDE
+a person hops side to side .
+the person is jumping around in place.
+a person hopping side to side in a spring-like motion
+
+================================================================================
+VERB GROUP: balance (54 files)
+================================================================================
+
+--- #1 Center: 011321 (dist: 23.71) --- NDE
+a figure walks carefully one foot in front of the other.
+a person with his hands by his sides raises his arms, steps on a beam, walks the length of the beam, steps off the beam and stops.
+a person slowly walks forward in a narrow path, holding their arms out to either side for balance.
+================================================================================
+VERB GROUP: kneel (47 files)
+================================================================================
+--- #2: 007838 (dist: 32.73) --- NDE
+kneeling down in place.
+this person gets down on the floor on both knees.
+a person uses their left hand to help them kneel down.
+
+================================================================================
+VERB GROUP: limp (36 files)
+================================================================================
+
+--- #1 Center: 006617 (dist: 30.24) --- NDE
+walking forward slowly while limping.
+a man walks forwards slowly using his left leg, whilst dragging his right leg with difficulty.
+a person walking very slowly and dragging one leg.
+
+================================================================================
+VERB GROUP: sneak (33 files)
+================================================================================
+
+--- #1 Center: 007427 (dist: 31.87) --- NDE
+a person slowly and quietly sneaks down the hallway.
+person sneakily walks forward in a slight crouch.
+a person walks very carefully, hunched over.
+
+================================================================================
+VERB GROUP: cartwheel (27 files)
+================================================================================
+
+--- #1 Center: 008410 (dist: 38.83) --- NDE
+a man moves forward and does a cartwheel.
+a person walks diagonally then does a cartwheel.
+the person did a cart wheel.
+
+================================================================================
+VERB GROUP: backpedal (25 files)
+================================================================================
+
+--- #1 Center: 009127 (dist: 32.94) --- NDE
+the person backed up to pose.
+walking backwards in a diagonal line.
+a person walk backwards slowly
+
+================================================================================
+VERB GROUP: trip (25 files)
+================================================================================
+
+--- #2: 001860 (dist: 26.15) --- NDE
+a person stomps their feet while waking forward.
+person walks down stairs stumbling slightly.
+a person stumbles forward for three steps and then stops.
+================================================================================
+VERB GROUP: spin (22 files)
+================================================================================
+
+--- #2: 004227 (dist: 37.18) --- NDE
+a person walks in a counterclockwise circle.
+jogging around in a circle
+a person runs in a spiral circle.
+
+================================================================================
+VERB GROUP: sprint (21 files)
+================================================================================
+
+--- #2: 011206 (dist: 40.24) --- NDE
+your son was playing football and stopped.
+a person who is standing with his hands by his sides dashes forward and to his left, leading with his left foot.
+
+================================================================================
+VERB GROUP: lunge (21 files)
+================================================================================
+
+--- #3: 003730 (dist: 35.36) --- NDE
+a person steps back on their left leg and brings their right arm in front of them.
+person is throwing something.
+a person lunges to the right, moving their alternate hand into the beginning of a typical bowling celebration pose.
+
+================================================================================
+VERB GROUP: exercise (20 files)
+===============================================================================
+
+--- #2: 004449 (dist: 45.86) --- NDE
+a man stretches his leg.
+person does squats on their back lag and extends their left leg forward
+a person bends towards his right and goes up and down.
+
+================================================================================
+VERB GROUP: sit (18 files)
+================================================================================
+
+--- #2: 009051 (dist: 35.15) --- NDE
+a person sits down slowly.
+a person sits down slowly.
+a person sits down on something.
+
+================================================================================
+VERB GROUP: stomp (17 files)
+================================================================================
+
+--- #1 Center: 012381 (dist: 29.19) --- NDE
+a person stomps his left foot.
+a person kicks the ground with his left leg.
+a person stomps their left foot.
+
+================================================================================
+VERB GROUP: march (17 files)
+================================================================================
+
+--- #1 Center: 004510 (dist: 41.43) --- NDE
+person marchs and then turns around.
+person is slowly walking.
+the person marches forward and comes to a stop.
+
+================================================================================
+VERB GROUP: shuffle (17 files)
+================================================================================
+
+--- #1 Center: 007392 (dist: 33.82) --- NDE
+someone shuffles their feet to the right, then left, then right.
+a figure shuffles from the left to the right
+a person skips to the right then skips to the left then skips to the right again.
+
+================================================================================
+VERB GROUP: skip (14 files)
+================================================================================
+
+--- #2: 013928 (dist: 38.74) --- NDE
+a person skips from right to left then walks slowly.
+a person skips and then walks.
+a person skips forward and to the right.
+================================================================================
+VERB GROUP: turn (13 files)
+================================================================================
+
+--- #1 Center: 007493 (dist: 19.18) --- NDE
+he turns to his right
+the man walks forwards, then pivots to right, turning around back the way that he came.
+a person walks and turns to his right.
+================================================================================
+VERB GROUP: dodge (8 files)
+================================================================================
+
+--- #3: 004228 (dist: 44.03) --- NDE
+a person steps forward and ducks twice to the right and then once to left.
+a person in the avoids getting hit while playing dodgeball
+a person dodges punches while being attacked.
+
+================================================================================
+VERB GROUP: fall (6 files)
+================================================================================
+
+--- #3: 013286 (dist: 55.49) --- NDE
+a person stands in place and then steps sideways to the left.
+a person falls to the right
+the person was pushed hard from the left.
+
+================================================================================
+VERB GROUP: crab walk (4 files)
+================================================================================
+
+--- #1 Center: 010249 (dist: 45.70) ---
+a person gets into the push-up position with an angled back and thrusts their hips
+the person is crawling across the floor like a crab
+someone starts on the floor then does push up while moving the body in wave motion.
+================================================================================
+VERB GROUP: roll (3 files)
+================================================================================
+
+--- #1 Center: 001809 (dist: 48.27) --- NDE
+a person runs, does an action roll, then starts to run again.
+a person leaping into a roll similar to a somersault, then taking off quickly after regaining stance.
+a person rolls forward at pace.
+
+================================================================================
+VERB GROUP: basketball (3 files)
+================================================================================
+
+--- #2: 009517 (dist: 43.29) --- NDE
+this person dribbles with his right hand and shoots.
+he throws something very high
+a person dribbles ball then shoots it in the basket.
+
+================================================================================
+VERB GROUP: sway (3 files)
+================================================================================
+
+--- #1 Center: 004926 (dist: 34.33) --- NDE
+someone pulls their hair back
+a person moves their hand as if they are fixing their hair
+from a standing position, the person gestures with a raised arm and hand while swaying back and forth on their feet
+
+================================================================================
+VERB GROUP: drag (3 files)
+================================================================================
+
+--- #1 Center: 010776 (dist: 32.89) ---
+this person is dragging something heavy.
+a person grips their left leg and staggers as if hurt.
+a person grasps at their left leg and drags it with them as they move in a small, counter-clockwise circle.
+
+================================================================================
+VERB GROUP: bow (3 files)
+================================================================================
+
+--- #1 Center: 002187 (dist: 28.04) --- NDE
+a person made a welcome jesture, while his right leg down a little
+a person does a moderate curtsy to the left
+the person twirls  slowly and comes up

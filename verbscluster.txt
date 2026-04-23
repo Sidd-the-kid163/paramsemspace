@@ -1,0 +1,46 @@
+walk: 2663
+jump: 554
+run: 313
+sidestep: 210
+kick: 204
+jog: 198
+dance: 189
+step back: 140
+step: 139
+squat: 101
+stumble: 95
+crawl: 76
+stand up: 65
+climb: 59
+hop: 59
+balance: 54
+kneel: 47
+limp: 36
+sneak: 33
+cartwheel: 27
+backpedal: 25
+trip: 25
+spin: 22
+sprint: 21
+lunge: 21
+exercise: 20
+sit: 18
+stomp: 17
+march: 17
+shuffle: 17
+skip: 14
+turn: 13
+dodge: 8
+fall: 6
+crab walk: 4
+roll: 3
+basketball: 3
+sway: 3
+drag: 3
+bow: 3
+flip: 2
+bend: 1
+shake: 1
+lift: 1
+raise: 1
+cross: 1

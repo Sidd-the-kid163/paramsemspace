@@ -1,0 +1,156 @@
+MOTION NOUNS
+    prompt = f"""
+From the three sentences that are describing the same motion, pick the action verb that is describing the overall motion (or is the main point of concern for the annotators) and if there are secondary verbs that are worth mentio
+
+Rules:
+- Lowercase
+- Comma-separated
+- Preferably legged motion
+- It is likely that there are no such motion-related nouns in which case, return exactly: none
+- Return none if no text is found to analyze
+- Do NOT include verbs that SpaCy would already tag as verbs
+
+Exclude:
+- Explanations
+- Directionality such as back, around, over
+
+
+Example:
+step, stride, pace, stroll, jog
+
+Text:
+{text}
+"""
+
+VERB/NOUN GROUPS
+    prompt = f"""
+Given a text which contains three annotations describing a motion, we are grouping it into a verb/noun group which describes its gait locomotion.
+Check if it fits well inside current group: {current_group}. If not, look at other groups ({all_groups}) and check if it would fit in there or
+if needed, create a new group that would describe it correctly. Follow examples of grouping which explains reasoning.
+
+Rules:
+- Lowercase
+- Output should be a single verb or noun group name (whether that be current, another, or new)
+- Make sure you are extracting a verb or noun from the annotations that is best describing the gait locomotion. If the annotations indicate that the motion is not about gait locomotion (no significant lower-body activity occurs), return REMOVE
+- If annotations indicate that the motion cannot be grouped by a singular verb or noun, return REMOVE
+- Take advantage of having three annotations to choose the verb or noun group.
+- Verbs are usually preferred over nouns unless nouns better describe the gait locomotion.
+
+Some examples from each group to assess:
+{group_examples}
+
+
+Example of grouping:
+
+- merge pace into sprint (gait locomotion are essentially analogous)
+- merge curtsy and bow into bow (gait locomotion are essentially analogous)
+- merge tightrope walk into balance (gait locomotion are essentially analogous)
+- merge circle into spin (gait locomotion are essentially analogous)
+- merge shuffle, moonwalk into dance (we dont want isolated motions that do not have other similar gait locomotions and should be categorized into a general category)
+- merge stretch, flex into exercise (we dont want isolated motions that do not have other similar gait locomotions and should be categorized into a general category)
+- merge summersault, flip into parkour (we dont want isolated motions that do not have other similar gait locomotions and should be categorized into a general category) but jump would not be in parkour because it is way too broad for parkour and would rather serve as its own category
+- merge walk, stride, strut, saunter, cross into walk (these may be different locomotions but are various forms of walking)
+- merge sway into walk (walk but style-induced)
+- merge startle into trip (startled is an adjective-verb that can lead to a motion similar to trip)
+- merge crouch into crawl (crawl is an animated version of crouch)
+- merge recover into fall (fall is usually followed by recover)
+
+Example of REMOVE:
+
+- Extracted verb was throw -> no significant lower body motion -> REMOVE
+- Extracted verb was dribble -> while a general lower body motion described with bend knees, it can fit a general category (i.e. basketball) -> basketball
+- Annotations indicate that a person is jumping, crouching, and punching -> significant combination of motions -> REMOVE
+- Annotations indicate that a person is walking and then jumps -> walking is a general gait motion, it is the jump that is significant -> jump
+- Annotations indicate that a person is standing and then squats (Same reason as above; focus on acquiring significant motions or motions that are described overall by the annotations) -> squat
+
+Text:
+{text_content}
+"""
+
+STYLEXTRACTION
+    prompt = f"""
+Given a text which contains three annotations describing a motion, we have grouped it into a verb/noun group (current group: {current_group}) which describes its gait locomotion.
+Whatever group was chosen was just a general category, now we must identify the specifity that makes that motion different from a default {current_group}. 
+
+Output can be either:
+- REMOVE
+- [Group] -> [Format output]
+- [Format output]
+
+Rules:
+- Lowercase
+- Output can be a word or phrase [does not matter what grammatic structure (i.e. noun, verb, adj, etc..) as long as it distinguishes the motion from its group]. But use basic forms ex. lemma for verb 
+- Follow formats of specifity extraction, which provides things to look out for that will lead to the output... Look at examples of each format for reasoning.
+- In some cases a format that has been found is not suited for our situation... They have been listed in 'Formats to remove" and in this case, you should return REMOVE
+- In cases of multiple formats present, the most dominant one should be followed through.
+- Note: the term 'gait' being used in the prompt is analogous to 'lower body motion'
+- Take advantage of having three annotations to choose the format and output.
+- Note that that the specifity extraction is being done for lower-body distinctiveness, not upper-body.
+- In cases where there may be multiple motions being described, make sure you are picking a format that aligns with the group the motion is in.
+- It may be that the motion is a typical {current_group} especially if a format is not found, in which case return REMOVE or if there is another secondary motion that has a dominant format, check out {all_groups} for where it may be a better fit and return group name -> format output
+
+Example of typical or stale motions to return REMOVE
+- "a person standing with legs apart, swats, bending at the knees and holding arms forward." in squat group (essentially describing a squat)
+
+Formats of specifity extraction:
+- Gait modifier (general)
+- Style-induced gait (should be a significant style, not something casual) (more implied than general)
+- Limb specific bias
+- Stability
+- Gait intensity
+
+Examples of formats of specificity extraction:
+- Gait modifier: if a text describes salsa and is in dance group -> salsa
+- Gait modifier: if a text describes jumping jacks and is in jump group -> jumping jacks
+- Gait modifier: "figure has one foot in front of the other and is leaning back and forth. as if trying to maintain balance. | a person is balancing on a tight rope" in balance group -> tightrope walk
+- Gait modifier: "a person does the ring around the rosie dance holding someone's right hand then left hand." in dance group -> ring around the rosie
+- Style-induced gait: if a text describes a sway and is in walk group -> sway
+- Style-induced gait: if a text describes a dramatic walk -> dramatic
+- Style-induced gait: if a text describes a cautious walk -> cautious
+- Style-induced gait: if a text describes a brisk walk -> brisk
+- Style-induced gait: "person prepares and kick jumps back and forth | a person loosens up before bringing each leg forward and backward in a jumping motion, then touches opposite elbows to opposite knees." in jump group -> warmup
+- Style-induced gait: "man tiptoes forward and then towards the right." in sneak group -> tiptoe
+- Limb specific bias: if a text describes kicking with left leg, do not pick 'left leg' as kicking already implies that
+- Limb specific bias: if a text describes stepping forward with left leg, do not pick 'left leg' as walking already implies that 
+- Limb specific bias: if a text describes limping while holding right knee in limp group -> hold right knee
+- Limb specific bias: if a text describes hopping on one foot in hop group -> one foot
+- Limb specific bias: if a text describes walking while dragging feet -> foot drop
+- Limb specific bias: if a text describes jumping on toes in jump group-> toes
+- Stability: if a text describes losing balance in sidestep group -> lose balance
+- Stability: "a person stumbles backwards then forwards hitting against something" in walk group -> unbalance
+- Gait intensity: if a text describes a large jump -> large
+- Gait intensity: if a text describes a long gait and is in walk group -> long gait
+
+Formats to remove:
+- Gait pace (an acceptable format can override this ex. a style that is influenced by pace)
+- Gait trajectory
+- Environmental constraint (focus is on flat ground)
+
+Examples of formats to remove:
+- Gait pace: fast
+- Gait pace: slow
+- Gait trajectory: In a circle
+- Gait trajectory: Diagonally
+- Gait trajectory: Forward
+- Gait trajectory: Backwards
+- Gait trajectory: Takes two steps forward and turns back
+- Environmental constraint: Slope
+- Environmental contraint:  Uneven
+- Environmental contraint:  Stairs
+
+Some examples from each group to assess:
+{group_examples}
+
+Text:
+{text_content}
+"""
+
+REDUNDANCY
+"""
+Given the json structure, go through the labels of each file number and remove any that are analogous to or synonymous with one or more of the other labels.
+Do not remove all the analogous/synonymous labels, leave one. Return the same modified json structure.
+
+The focus of the labels is on lower-body motion. You are not to aggressively remove content and only if they are the same by definition.
+
+{group_json}
+"""
